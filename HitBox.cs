@@ -31,7 +31,7 @@ internal class HitBox
 			Position = position,
 		};
 
-		CircleShape point = new CircleShape(1f)
+		CircleShape point = new CircleShape(2f)
 		{
 			Position = hitBoxRect.Center,
 			FillColor = Color.Red
