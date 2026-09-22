@@ -1,5 +1,6 @@
 ﻿using SFML.Graphics;
-    
+using SFML.System;
+
 namespace Plattslopper;
 
 public class Room
@@ -14,6 +15,7 @@ public class Room
 
     public void Update(float deltaTime)
     {
+        
         for (int i = 0; i < RoomObjects.Count; i++)
         {
             //först uppdatera alla värden
@@ -25,10 +27,10 @@ public class Room
 
     public void Draw(RenderWindow window)
     {
-        backGroundDrawer.DrawSprite(backGroundDrawer.GetSprite(spriteName), window);
-         for (int i = 0; i < RoomObjects.Count; i++)
+        backGroundDrawer.DrawSprite(new(0, 0), (Vector2f)Game.WindowSize, backGroundDrawer.GetSprite(spriteName), window);
+        for (int i = 0; i < RoomObjects.Count; i++)
         {
-           RoomObjects[i].Draw(window); // sen ritar man ut allt till skärmen
+            RoomObjects[i].Draw(window); // sen ritar man ut allt till skärmen
         }
     }
 }

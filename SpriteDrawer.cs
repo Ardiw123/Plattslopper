@@ -1,3 +1,4 @@
+using System.Numerics;
 using SFML.Graphics;
 using SFML.System;
 
@@ -41,8 +42,10 @@ public class SpriteDrawer
         }
     }
 
-    public void DrawSprite(Sprite sprite, RenderWindow window)
+     public void DrawSprite(Vector2f position, Vector2f size,Sprite sprite, RenderWindow window)
     {
+        sprite.Position = position;
+        sprite.Scale = new Vector2f(size.X / sprite.Texture.Size.X, size.Y / sprite.Texture.Size.Y);
         window.Draw(sprite);
     }
 }

@@ -8,11 +8,12 @@ namespace Plattslopper;
 // this class should handle room switching
 public static class Game
 {
-
     public static Room currentRoom;
+    public static Vector2u WindowSize = new(1920, 1080);
+
     public static void StartGame()
     {
-        using (var window = new RenderWindow(new VideoMode(1920, 1080), "Plattsopper"))
+        using (var window = new RenderWindow(new VideoMode(WindowSize.X, WindowSize.Y), "Plattsopper"))
         {
             window.Closed += (o, e) => window.Close();
 
@@ -24,7 +25,7 @@ public static class Game
 
             Player p = new()
             {
-                position = new(1000,500),
+                position = new(1000, 500),
             };
 
             window.SetFramerateLimit(60);

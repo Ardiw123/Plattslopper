@@ -1,7 +1,6 @@
 ﻿using SFML.Graphics;
 using SFML.System;
 using SFML.Window;
-using System.Xml.Serialization;
 
 namespace Plattslopper;
 
@@ -17,7 +16,7 @@ public class Player : RoomObject
     public Player()
     {
         size = new Vector2f(100, 100);
-        hurtBox = new(new(100, 100), new(60, 100));
+        hurtBox = new(new(100, 100), size);
 
         Console.WriteLine(hurtBox.center);
         spriteDrawer.InitializeSprites([spriteName]);
@@ -35,9 +34,9 @@ public class Player : RoomObject
 
     public override void Draw(RenderWindow window)
     {
-        spriteDrawer.DrawSprite(spriteDrawer.GetSprite(spriteName), window);
+        spriteDrawer.DrawSprite(position, size, spriteDrawer.GetSprite(spriteName), window);
 
-        hurtBox.DebugDraw(window);
+        hurtBox.DrawHitbox(window);
     }
 
     private void Inputs(float deltatime)
