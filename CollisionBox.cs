@@ -6,13 +6,13 @@ using System.Text;
 
 namespace Plattslopper;
 
-internal class HitBox
+public class CollisionBox
 {
 	private Vector2f position;
 	private Vector2f size;
-	public FloatRect hitBoxRect => new FloatRect(position, size);
+	public FloatRect collisionBoxRect => new FloatRect(position, size);
 
-	public HitBox(Vector2f position, Vector2f size)
+	public CollisionBox(Vector2f position, Vector2f size)
 	{
 		this.position = position;
 		this.size = size;
@@ -20,7 +20,7 @@ internal class HitBox
 
 	public bool Collide(FloatRect otherRect, out Collision.Hit hit)
 	{
-		return Collision.RectangleRectangle(hitBoxRect, otherRect, out hit);
+		return Collision.RectangleRectangle(collisionBoxRect, otherRect, out hit);
 	}
 
 	public void DebugDraw(RenderWindow window)
@@ -33,7 +33,7 @@ internal class HitBox
 
 		CircleShape point = new CircleShape(2f)
 		{
-			Position = hitBoxRect.Center,
+			Position = collisionBoxRect.Center,
 			FillColor = Color.Red
 		};
 
