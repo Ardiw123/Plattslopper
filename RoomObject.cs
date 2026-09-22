@@ -8,9 +8,8 @@ public abstract class RoomObject
 	protected SpriteDrawer spriteDrawer;
 
 	protected CollisionBox hurtBox;
-	private Vector2f position;
-	private Vector2f size;
-	public FloatRect hitBox => new FloatRect(position, size);
+	public Vector2f position;
+	public Vector2f size;
 	public bool remove = false;
 
 	abstract public void Update(float deltaTime);

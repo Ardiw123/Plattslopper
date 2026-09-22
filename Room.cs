@@ -1,15 +1,15 @@
 ﻿using SFML.Graphics;
-
+    
 namespace Plattslopper;
 
 public class Room
 {
     public List<RoomObject> RoomObjects = new();
     SpriteDrawer backGroundDrawer = new();
-
+    string spriteName = "flower";
     public Room()
     {
-        backGroundDrawer.InitializeSprites();
+        backGroundDrawer.InitializeSprites([spriteName]);
     }
 
     public void Update(float deltaTime)
@@ -25,7 +25,7 @@ public class Room
 
     public void Draw(RenderWindow window)
     {
-        backGroundDrawer.DrawSprite(backGroundDrawer.GetSprite("sprite"), window);
+        backGroundDrawer.DrawSprite(backGroundDrawer.GetSprite(spriteName), window);
          for (int i = 0; i < RoomObjects.Count; i++)
         {
            RoomObjects[i].Draw(window); // sen ritar man ut allt till skärmen

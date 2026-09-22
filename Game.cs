@@ -12,15 +12,21 @@ public static class Game
     public static Room currentRoom;
     public static void StartGame()
     {
-        using (var window = new RenderWindow(new VideoMode(800, 600), "Plattsopper"))
+        using (var window = new RenderWindow(new VideoMode(1920, 1080), "Plattsopper"))
         {
             window.Closed += (o, e) => window.Close();
 
             Clock clock = new Clock();
 
+            SpriteDrawer.InitilizeAllSprites();
+
             currentRoom = new();
 
-            Player p = new();
+            Player p = new()
+            {
+                position = new(1000,500),
+            };
+            
 
             //mainloop
             while (window.IsOpen)
