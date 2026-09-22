@@ -14,7 +14,6 @@ public class CollisionBox
 	public Vector2f center => new Vector2f(position.X + collisionBoxRect.Width / 2, position.Y + collisionBoxRect.Height / 2);
 	public FloatRect collisionBoxRect => new FloatRect(position, size);
 
-
 	public CollisionBox(Vector2f position, Vector2f size)
 	{
 		this.position = position;
@@ -25,7 +24,6 @@ public class CollisionBox
 	{
 		return Collision.RectangleRectangle(collisionBoxRect, otherRect, out hit);
 	}
-
 
 	public void DrawHitbox(RenderWindow window)
 	{

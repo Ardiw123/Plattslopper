@@ -16,9 +16,9 @@ public class Player : RoomObject
     public Player()
     {
         size = new Vector2f(100, 100);
-        hurtBox = new(new(100, 100), size);
+        collisionBox = new(new(100, 100), size);
 
-        Console.WriteLine(hurtBox.center);
+        Console.WriteLine(collisionBox.center);
         spriteDrawer.InitializeSprites([spriteName]);
     }
 
@@ -29,17 +29,18 @@ public class Player : RoomObject
         Console.WriteLine(velocity);
 
         position += velocity;
-        hurtBox = new CollisionBox(position, hurtBox.size);
+        collisionBox.position = position;
+        collisionBox.size = size;
     }
 
     public override void Draw(RenderWindow window)
     {
         spriteDrawer.DrawSprite(position, size, spriteDrawer.GetSprite(spriteName), window);
 
-        hurtBox.DrawHitbox(window);
+        collisionBox.DrawHitbox(window);
     }
 
-    private void Inputs(float deltatime)
+    void Inputs(float deltatime)
     {
         velocity = new Vector2f(DecayVelocity(velocity, deltatime), velocity.Y);
 
@@ -56,7 +57,7 @@ public class Player : RoomObject
         Jump(deltatime);
     }
 
-    private float DecayVelocity(Vector2f vector, float deltatime)
+    float DecayVelocity(Vector2f vector, float deltatime)
     {
         if (vector.X > 0)
         {
@@ -77,7 +78,7 @@ public class Player : RoomObject
         return 0;
     }
 
-    private void Gravity(float deltatime)
+    void Gravity(float deltatime)
     {
         // Temporary floor will be repaced when ther is an actual floor to stand on.
         if (position.Y >= 500)
@@ -91,7 +92,7 @@ public class Player : RoomObject
         velocity.Y += 100 * deltatime;
     }
 
-    private void Jump(float deltatime)
+    void Jump(float deltatime)
     {
         if (KeyboardHandler.WasKeyJustPressed(Keyboard.Key.Space) && !isJumping && isGrounded)
         {

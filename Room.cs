@@ -33,4 +33,5 @@ public class Room
             RoomObjects[i].Draw(window); // sen ritar man ut allt till skärmen
         }
     }
+    
 }

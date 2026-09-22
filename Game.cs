@@ -2,6 +2,7 @@ using SFML.Graphics;
 using SFML.System;
 using SFML.Window;
 using SFML.Audio;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Plattslopper;
 
@@ -11,13 +12,23 @@ public static class Game
     public static Room currentRoom;
     public static Vector2u WindowSize = new(1920, 1080);
 
-    public static void StartGame()
-    {
-        using (var window = new RenderWindow(new VideoMode(WindowSize.X, WindowSize.Y), "Plattsopper"))
-        {
-            window.Closed += (o, e) => window.Close();
+    // dags att plugga det här: 
 
-            Clock clock = new Clock();
+    /*
+        public: Access isn't restricted.
+        protected: Access is limited to the containing class or types derived from the containing class.
+        internal: Access is limited to the current assembly.
+        protected internal: Access is limited to the current assembly or types derived from the containing class.
+        private: Access is limited to the containing type.
+        private protected: Access is limited to the containing class or types derived from the containing class within the current assembly.
+    */
+
+    internal static void StartGame()
+    {
+        using (var window = new RenderWindow(new VideoMode(WindowSize.X, WindowSize.Y), "Plattslopper"))
+        {
+            window.SetFramerateLimit(60);
+            window.Closed += (o, e) => window.Close();
 
             SpriteDrawer.InitilizeAllSprites();
 
@@ -27,9 +38,13 @@ public static class Game
             {
                 position = new(1000, 500),
             };
+            Block b = new()
+            {
+                position = new(100, 500),
+            };
 
-            window.SetFramerateLimit(60);
 
+            Clock clock = new Clock();
             //mainloop
             while (window.IsOpen)
             {

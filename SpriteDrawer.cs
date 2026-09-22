@@ -18,10 +18,10 @@ public class SpriteDrawer
         }
     }
 
-    static Sprite GetStaticSprite(string soundName)
+    static Sprite GetStaticSprite(string spriteName)
     {
         //if it gets a string that doesnt exist it doesnt crash😂😂
-        if (AllSprites.TryGetValue(soundName, out Sprite sprite))
+        if (AllSprites.TryGetValue(spriteName, out Sprite sprite))
         {
             return sprite;
         }
@@ -34,6 +34,7 @@ public class SpriteDrawer
     {
         return sprites[spriteName];
     }
+
     public void InitializeSprites(string[] spriteNames)
     {
         for (int i = 0; i < spriteNames.Length; i++)

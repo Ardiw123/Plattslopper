@@ -5,15 +5,26 @@ using SFML.Graphics;
 using SFML.System;
 namespace Plattslopper;
 
-class Block : RoomObject
+public class Block : RoomObject
 {
+    string spriteName = "mcnutt";
+
+    public Block()
+    {
+        size = new(200, 200);
+        spriteDrawer.InitializeSprites([spriteName]);
+        collisionBox = new(new(100, 100), size);
+    }
+
     public override void Update(float deltaTime)
     {
-        throw new NotImplementedException();
+        collisionBox.position = position;
+        collisionBox.size = size;
     }
 
     public override void Draw(RenderWindow window)
     {
-        throw new NotImplementedException();
+        spriteDrawer.DrawSprite(position, size, spriteDrawer.GetSprite(spriteName), window);
+        collisionBox.DrawHitbox(window);
     }
 }

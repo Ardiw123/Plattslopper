@@ -7,10 +7,10 @@ public abstract class RoomObject
 {
 	protected SpriteDrawer spriteDrawer;
 
-	protected CollisionBox hurtBox;
+	protected CollisionBox collisionBox;
 	public Vector2f position;
 	public Vector2f size;
-	public bool remove = false;
+	public bool remove = false; 
 
 	abstract public void Update(float deltaTime);
 
