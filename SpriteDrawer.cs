@@ -13,10 +13,10 @@ public class SpriteDrawer
     {
         Sprite DefaultSprite = new(new Texture("assets/flower.png"));
 
-        sprites.Add("sprite", DefaultSprite);
-    }
+		sprites.Add("sprite", DefaultSprite);
+	}
 
-    public void DrawSprite(Sprite sprite, RenderWindow window)
+	public void DrawSprite(Sprite sprite, RenderWindow window)
     {
         window.Draw(sprite);
     }

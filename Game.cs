@@ -12,7 +12,7 @@ public static class Game
     public static Room currentRoom;
     public static void StartGame()
     {
-        using (var window = new RenderWindow(new VideoMode(new Vector2u(800, 600)), "Plattsopper"))
+        using (var window = new RenderWindow(new VideoMode(800, 600), "Plattsopper"))
         {
             window.Closed += (o, e) => window.Close();
 

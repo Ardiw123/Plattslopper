@@ -1,4 +1,6 @@
-﻿namespace Plattslopper;
+﻿using SFML.Window;
+
+namespace Plattslopper;
 
 class Program
 {

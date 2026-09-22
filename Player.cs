@@ -8,7 +8,7 @@ public class Player : RoomObject
     public Player()
     {
         hurtBox = new CollisionBox(new Vector2f(100, 100), new Vector2f(120, 300));
-        Console.WriteLine(hurtBox.collisionBoxRect.Center);
+        Console.WriteLine(hurtBox.center);
         spriteDrawer.InitializeSprites();
     }
 
