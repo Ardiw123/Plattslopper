@@ -26,7 +26,8 @@ public static class Game
             {
                 position = new(1000,500),
             };
-            
+
+            window.SetFramerateLimit(60);
 
             //mainloop
             while (window.IsOpen)
