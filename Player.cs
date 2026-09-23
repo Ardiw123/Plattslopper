@@ -17,6 +17,7 @@ public class Player : RoomObject
     {
         size = new Vector2f(100, 100);
         collisionBox = new(new(100, 100), size);
+        tag = "player";
 
         Console.WriteLine(collisionBox.center);
         spriteDrawer.InitializeSprites([spriteName]);
