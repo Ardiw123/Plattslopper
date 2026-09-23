@@ -12,9 +12,8 @@ public class Player : RoomObject
     bool isJumping = false;
     const int MAXJUMPSTEPS = 7;
     int jumpSteps = 0;
-
     int playerMoveSpeed = 800;
-    int playerJumpPower = 850;
+    int playerJumpPower = 250;
     const float playerMoveDecayConstant = 0.6f;
     int playerGravity = 100;
 
@@ -32,12 +31,13 @@ public class Player : RoomObject
     {
         Inputs(deltaTime);
 
-        //Console.WriteLine($"{velocity}: {position}");
-        //Console.WriteLine(jumpSteps);
-
 		position += velocity;
         collisionBox.position = position;
         collisionBox.size = size;
+
+        int numberOfCollitions = 0;
+        Vector2f positionChange = new Vector2f(0, 0);
+        bool isGroundedNow = false;
 
 		foreach (RoomObject roomObject in Game.currentRoom.RoomObjects)
         {
@@ -46,21 +46,27 @@ public class Player : RoomObject
 
             Collision.Hit hit;
             Vector2f collitionNormal = collisionBox.Collide(roomObject, out hit);
-            if (collitionNormal.X == 1 && collitionNormal.Y == 1)
-            {
-                isGrounded = false;
-            }
 
-            if (collitionNormal.Y > 0)
+            if (collitionNormal.X == 1 && collitionNormal.Y == 1)
+                continue;
+
+			numberOfCollitions++;
+
+            if (collitionNormal.Y == 0)
             {
-                cancelJump();
-                isGrounded = true;
+				isGroundedNow = true;
+				cancelJump();
             }
 
 			velocity.X *= collitionNormal.X;
             velocity.Y *= collitionNormal.Y;
-            position += hit.Normal * hit.Overlap;
+            positionChange += hit.Normal * hit.Overlap;
 		}
+
+        isGrounded = isGroundedNow;
+
+        if (numberOfCollitions > 0)
+            position += positionChange / numberOfCollitions;
 	}
 
     public override void Draw(RenderWindow window)
@@ -74,14 +80,21 @@ public class Player : RoomObject
     {
         velocity = new Vector2f(DecayVelocity(velocity, deltatime), velocity.Y);
 
+        bool isVelocityChanged = false;
+        float velocityChangeX = 0;
         if (KeyboardHandler.IsKeyDown(Keyboard.Key.A))
         {
-            velocity = new Vector2f(-playerMoveSpeed * deltatime, velocity.Y);
+            isVelocityChanged = true;
+            velocityChangeX += -playerMoveSpeed * deltatime;
         }
         if (KeyboardHandler.IsKeyDown(Keyboard.Key.D))
         {
-            velocity = new Vector2f(playerMoveSpeed * deltatime, velocity.Y);
-        }
+            isVelocityChanged = true;
+            velocityChangeX += playerMoveSpeed * deltatime;
+		}
+
+        if (isVelocityChanged)
+            velocity = new Vector2f(velocityChangeX, velocity.Y);
 
         Gravity(deltatime);
         Jump(deltatime);
@@ -89,22 +102,12 @@ public class Player : RoomObject
 
     float DecayVelocity(Vector2f vector, float deltatime)
     {
-        if (vector.X > 0)
-        {
-            if (vector.X < 0.1)
-                return 0;
+        float X = MathF.Abs(vector.X);
 
+        if (X > 0.1)
+        {
             return vector.X *= playerMoveDecayConstant;
         }
-
-        if (vector.X < 0)
-        {
-            if (vector.X > -0.1)
-                return 0;
-
-            return vector.X *= playerMoveDecayConstant;
-        }
-
         return 0;
     }
 
@@ -130,20 +133,19 @@ public class Player : RoomObject
             velocity += new Vector2f(0, -playerJumpPower * deltatime);
             isGrounded = false;
             isJumping = true;
-            jumpSteps++;
         }
 
         jumpSteps++;
+		Console.WriteLine(jumpSteps - 1);
 
-        if (KeyboardHandler.IsKeyDown(Keyboard.Key.Space) && !(jumpSteps == MAXJUMPSTEPS) && isJumping)
+		if (KeyboardHandler.IsKeyDown(Keyboard.Key.Space) && jumpSteps <= MAXJUMPSTEPS && isJumping)
         {
             velocity += new Vector2f(0, -playerJumpPower * deltatime);
         }
         else
         {
-            isJumping = false;
+            cancelJump();
         }
-		Console.WriteLine(jumpSteps);
     }
 
     public void cancelJump()
