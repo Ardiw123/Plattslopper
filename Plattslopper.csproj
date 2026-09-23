@@ -8,8 +8,15 @@
   </PropertyGroup>
 
 	<ItemGroup>
-		<None Remove="assets/*.png" />
-		<EmbeddedResource Include="assets/*.png">
+		<None Remove="sprites/*.png" />
+		<EmbeddedResource Include="sprites/*.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</EmbeddedResource>
+	</ItemGroup>
+
+  <ItemGroup>
+		<None Remove="levels/*.json" />
+		<EmbeddedResource Include="levels/*.json">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</EmbeddedResource>
 	</ItemGroup>

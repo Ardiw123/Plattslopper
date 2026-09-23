@@ -4,13 +4,14 @@ using SFML.System;
 
 public class SpriteDrawer
 {
+    static string spriteDirectory = "sprites";
 
     static Dictionary<string, Sprite> AllSprites = new(StringComparer.OrdinalIgnoreCase);
 
     public static void InitilizeAllSprites()
     {
         //får alla wav filer i assets och sparar de i en dictionary
-        foreach (string filePath in Directory.EnumerateFiles("assets", "*.png"))
+        foreach (string filePath in Directory.EnumerateFiles(spriteDirectory, "*.png"))
         {
             string name = Path.GetFileNameWithoutExtension(filePath);
             System.Console.WriteLine(name);
