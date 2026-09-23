@@ -20,9 +20,21 @@ public class CollisionBox
 		this.size = size;
 	}
 
-	public bool Collide(FloatRect otherRect, out Collision.Hit hit)
+	public Vector2f Collide(RoomObject otherObject, out Collision.Hit hit)
 	{
-		return Collision.RectangleRectangle(collisionBoxRect, otherRect, out hit);
+		if (!Collision.RectangleRectangle(collisionBoxRect, otherObject.collisionBox.collisionBoxRect, out hit))
+		{
+			return new Vector2f(1, 1);
+		}
+
+		if (MathF.Abs(hit.Normal.X) > MathF.Abs(hit.Normal.Y))
+		{
+			return new Vector2f(0, 1); 
+		}
+		else
+		{
+			return new Vector2f(1, 0);
+		}
 	}
 
 	public void DrawHitbox(RenderWindow window)
@@ -46,5 +58,7 @@ public class CollisionBox
 			window.Draw(point);
 		}
 	}
+
+
 
 }

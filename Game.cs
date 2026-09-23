@@ -42,9 +42,25 @@ public static class Game
             {
                 position = new(100, 500),
             };
+			Block c = new()
+			{
+				position = new(300, 500),
+			};
+			Block d = new()
+			{
+				position = new(500, 500),
+			};
+			Block e = new()
+			{
+				position = new(700, 500),
+			};
+			Block f = new()
+			{
+				position = new(900, 500),
+			};
 
 
-            Clock clock = new Clock();
+			Clock clock = new Clock();
             //mainloop
             while (window.IsOpen)
             {
