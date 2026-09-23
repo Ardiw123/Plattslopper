@@ -1,7 +1,7 @@
 using System.Numerics;
 using SFML.Graphics;
 using SFML.System;
-
+//ni ni n ini
 public class SpriteDrawer
 {
     static string spriteDirectory = "sprites";
