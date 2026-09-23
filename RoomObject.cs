@@ -5,6 +5,7 @@ namespace Plattslopper;
 
 public abstract class RoomObject
 {
+	public string tag;
 	protected SpriteDrawer spriteDrawer;
 	public CollisionBox collisionBox;
 	public Vector2f position;
