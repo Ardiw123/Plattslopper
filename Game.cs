@@ -33,34 +33,36 @@ public static class Game
             SpriteDrawer.InitilizeAllSprites();
 
             currentRoom = new();
-
-            Player p = new()
             {
-                position = new(1000, 500),
-            };
-            Block b = new()
-            {
-                position = new(100, 500),
-            };
-			Block c = new()
-			{
-				position = new(300, 500),
-			};
-			Block d = new()
-			{
-				position = new(500, 500),
-			};
-			Block e = new()
-			{
-				position = new(700, 500),
-			};
-			Block f = new()
-			{
-				position = new(900, 500),
-			};
+                Player p = new()
+                {
+                    position = new(1000, 500),
+                };
+                Block b = new()
+                {
+                    position = new(100, 500),
+                };
+                Block c = new()
+                {
+                    position = new(300, 500),
+                };
+                Block d = new()
+                {
+                    position = new(500, 500),
+                };
+                Block e = new()
+                {
+                    position = new(700, 500),
+                };
+                Block f = new()
+                {
+                    position = new(900, 500),
+                };
 
+                currentRoom.RoomObjects.AddRange(p,b,c,e,f);
+            }
 
-			Clock clock = new Clock();
+            Clock clock = new Clock();
             //mainloop
             while (window.IsOpen)
             {

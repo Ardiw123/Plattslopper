@@ -9,9 +9,10 @@ public struct RoomData
 
     public static RoomData LoadFromFile(string filePath)
     {
-        string data = File.ReadAllText(filePath);
-        return JsonSerializer.Deserialize<RoomData>(data, new JsonSerializerOptions { IncludeFields = true });
-        // ?? throw new InvalidOperationException("Could not load RoomData");
+        string json = File.ReadAllText(filePath);
+
+        return JsonSerializer.Deserialize<RoomData>(json, new JsonSerializerOptions { IncludeFields = true });
+
     }
 
     [JsonInclude] List<RoomObject> roomObjects;
@@ -22,12 +23,6 @@ public struct RoomData
         roomObjects = new();
     }
 
-    public void SloppaNerDet()
-    {
-        var slop = LoadObjects("levels/level0.json");
-        roomObjects = slop.roomObjects;
-        backgroundName = slop.backgroundName;
-    }
 
     public void print()
     {
@@ -41,17 +36,6 @@ public struct RoomData
         }
     }
 
-    RoomData LoadObjects(string filePath)
-    {
 
-        string data = File.ReadAllText(filePath);
-
-        //detta kan vi använda om vi  vill spara allt i samma json
-        //List<RoomObject> loadedLocations = JsonSerializer.Deserialize<List<RoomObject>>(data, new JsonSerializerOptions { IncludeFields = true }) ?? [];
-
-        var sloppigaKirk = JsonSerializer.Deserialize<RoomData>(data, new JsonSerializerOptions { IncludeFields = true });
-
-        return sloppigaKirk;
-    }
 
 }

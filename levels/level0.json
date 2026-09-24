@@ -2,6 +2,7 @@
   "backgroundName": "flower",
   "roomObjects": [
     {
+      "$type": "block",
       "tag": "block",
       "spriteName": "mcnutt",
       "position": {
@@ -14,6 +15,7 @@
       }
     },
     {
+      "$type": "player",
       "tag": "player",
       "spriteName": "adolf",
       "position": {
@@ -27,4 +29,3 @@
     }
   ]
 }
- 

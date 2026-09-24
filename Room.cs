@@ -7,18 +7,14 @@ public class Room
 {
     public List<RoomObject> RoomObjects = new();
     string spriteName = "flower";
-
     public RoomData roomData;
-
-
     SpriteDrawer backGroundDrawer = new();
+
     public Room()
     {
         backGroundDrawer.InitializeSprites([spriteName]);
-        roomData = new();
-        roomData.SloppaNerDet();
+        roomData = RoomData.LoadFromFile("levels/level0.json");
         roomData.print();
-
     }
 
     public void Update(float deltaTime)

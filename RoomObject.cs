@@ -1,8 +1,13 @@
 ﻿using SFML.Graphics;
 using SFML.System;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+
 
 namespace Plattslopper;
 
+[JsonDerivedType(typeof(Block), typeDiscriminator: "block")]
+[JsonDerivedType(typeof(Player), typeDiscriminator: "player")]
 public abstract class RoomObject
 {
 	public string tag;
@@ -11,7 +16,7 @@ public abstract class RoomObject
 
 	protected SpriteDrawer spriteDrawer;
 	public CollisionBox collisionBox;
-	public bool remove = false; 
+	public bool remove = false;
 
 	abstract public void Update(float deltaTime);
 
@@ -19,7 +24,7 @@ public abstract class RoomObject
 
 	public RoomObject()
 	{
-		Game.currentRoom.RoomObjects.Add(this);
+		//Game.currentRoom.RoomObjects.Add(this);
 		spriteDrawer = new();
 	}
 	//abstract public void RoomStart();
