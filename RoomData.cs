@@ -15,8 +15,8 @@ public struct RoomData
 
     }
 
-    [JsonInclude] List<RoomObject> roomObjects;
-    [JsonInclude] string backgroundName;
+    [JsonInclude] public List<RoomObject> roomObjects;
+    [JsonInclude] public string backgroundName;
 
     public RoomData()
     {

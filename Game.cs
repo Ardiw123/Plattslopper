@@ -33,7 +33,7 @@ public static class Game
             SpriteDrawer.InitilizeAllSprites();
 
             currentRoom = new();
-            {
+          /*  {
                 Player p = new()
                 {
                     position = new(1000, 500),
@@ -59,8 +59,11 @@ public static class Game
                     position = new(900, 500),
                 };
 
-                currentRoom.RoomObjects.AddRange(p,b,c,e,f);
-            }
+                currentRoom.RoomObjects.AddRange(p, b, c, e, f);
+            }*/
+
+            currentRoom.roomData.print();
+            currentRoom.RoomObjects.AddRange(currentRoom.roomData.roomObjects);
 
             Clock clock = new Clock();
             //mainloop
