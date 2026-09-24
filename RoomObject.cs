@@ -10,7 +10,7 @@ namespace Plattslopper;
 [JsonDerivedType(typeof(Player), typeDiscriminator: "player")]
 public abstract class RoomObject
 {
-	public string tag;
+
 	public Vector2f position;
 	public Vector2f size;
 

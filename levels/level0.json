@@ -3,7 +3,6 @@
   "roomObjects": [
     {
       "$type": "block",
-      "tag": "block",
       "spriteName": "mcnutt",
       "position": {
         "X": 400,
@@ -16,7 +15,6 @@
     },
     {
       "$type": "player",
-      "tag": "player",
       "spriteName": "adolf",
       "position": {
         "X": 700,

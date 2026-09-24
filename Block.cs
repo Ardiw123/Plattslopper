@@ -11,7 +11,6 @@ public class Block : RoomObject
 
     public Block()
     {
-        tag = "block";
         size = new(200, 200);
         spriteDrawer.InitializeSprites([spriteName]);
         collisionBox = new(new(100, 100), size);

@@ -32,7 +32,7 @@ public static class Game
 
             SpriteDrawer.InitilizeAllSprites();
 
-            currentRoom = new();
+            currentRoom = Room.MakeRoomFromRoomData(RoomData.LoadFromFile("levels/level0.json"));
           /*  {
                 Player p = new()
                 {

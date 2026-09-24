@@ -1,20 +1,29 @@
-﻿using SFML.Graphics;
+﻿using System.Security.Cryptography.X509Certificates;
+using SFML.Graphics;
 using SFML.System;
 
 namespace Plattslopper;
 
 public class Room
 {
-    public List<RoomObject> RoomObjects = new();
-    string spriteName = "flower";
-    public RoomData roomData;
-    SpriteDrawer backGroundDrawer = new();
-
-    public Room()
-    {
-        backGroundDrawer.InitializeSprites([spriteName]);
-        roomData = RoomData.LoadFromFile("levels/level0.json");
+    public static Room MakeRoomFromRoomData(RoomData roomData)
+    {   
         roomData.print();
+        Room newRoom = new()
+        {
+            RoomObjects = roomData.roomObjects,
+            spriteName = roomData.backgroundName,
+        };
+        newRoom.roomData = roomData;
+        return newRoom;
+    }
+    public List<RoomObject> RoomObjects;
+    string spriteName;
+    SpriteDrawer backGroundDrawer;
+    public RoomData roomData;
+    Room()
+    {
+         backGroundDrawer = new();
     }
 
     public void Update(float deltaTime)

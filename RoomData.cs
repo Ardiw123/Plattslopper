@@ -12,7 +12,6 @@ public struct RoomData
         string json = File.ReadAllText(filePath);
 
         return JsonSerializer.Deserialize<RoomData>(json, new JsonSerializerOptions { IncludeFields = true });
-
     }
 
     [JsonInclude] public List<RoomObject> roomObjects;
@@ -30,7 +29,6 @@ public struct RoomData
         System.Console.WriteLine(roomObjects.Count);
         foreach (RoomObject ob in roomObjects)
         {
-            System.Console.WriteLine(ob.tag);
             System.Console.WriteLine(ob.position);
             System.Console.WriteLine(ob.size);
         }
