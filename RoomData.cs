@@ -1,28 +1,57 @@
+using System.Text.Json;
+using System.Text.Json.Serialization;
+
 namespace Plattslopper;
 
 public struct RoomData
 {
-    List<RoomObject> roomObjects;
-    string backgroundName;
-    /*
-    List<Location> LoadLocations(string filePath)
+    //public static Dictionary<string,RoomData> 
+
+    public static RoomData LoadFromFile(string filePath)
+    {
+        string data = File.ReadAllText(filePath);
+        return JsonSerializer.Deserialize<RoomData>(data, new JsonSerializerOptions { IncludeFields = true });
+        // ?? throw new InvalidOperationException("Could not load RoomData");
+    }
+
+    [JsonInclude] List<RoomObject> roomObjects;
+    [JsonInclude] string backgroundName;
+
+    public RoomData()
+    {
+        roomObjects = new();
+    }
+
+    public void SloppaNerDet()
+    {
+        var slop = LoadObjects("levels/level0.json");
+        roomObjects = slop.roomObjects;
+        backgroundName = slop.backgroundName;
+    }
+
+    public void print()
+    {
+        System.Console.WriteLine(backgroundName);
+        System.Console.WriteLine(roomObjects.Count);
+        foreach (RoomObject ob in roomObjects)
+        {
+            System.Console.WriteLine(ob.tag);
+            System.Console.WriteLine(ob.position);
+            System.Console.WriteLine(ob.size);
+        }
+    }
+
+    RoomData LoadObjects(string filePath)
     {
 
-        string data;
+        string data = File.ReadAllText(filePath);
 
-        if (S.Testing == true) data = File.ReadAllText(S.TestFilePath);
-        else data = File.ReadAllText(filePath);
+        //detta kan vi använda om vi  vill spara allt i samma json
+        //List<RoomObject> loadedLocations = JsonSerializer.Deserialize<List<RoomObject>>(data, new JsonSerializerOptions { IncludeFields = true }) ?? [];
 
-        var loadedLocations = JsonSerializer.Deserialize<List<Location>>(data, new JsonSerializerOptions { IncludeFields = true }) ?? [];
+        var sloppigaKirk = JsonSerializer.Deserialize<RoomData>(data, new JsonSerializerOptions { IncludeFields = true });
 
-        for (var i = 0; i < loadedLocations.Count(); ++i)
-        {
-            var theLocation = loadedLocations[i];
-            theLocation.NeedItemToEnter = !string.IsNullOrEmpty(theLocation.KeyItem);
-            loadedLocations[i] = theLocation;
-        }
-
-        return loadedLocations;
+        return sloppigaKirk;
     }
-*/
+
 }

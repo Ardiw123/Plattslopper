@@ -14,7 +14,7 @@ public class SpriteDrawer
         foreach (string filePath in Directory.EnumerateFiles(spriteDirectory, "*.png"))
         {
             string name = Path.GetFileNameWithoutExtension(filePath);
-            System.Console.WriteLine(name);
+           // System.Console.WriteLine(name);
             AllSprites[name] = new Sprite(new Texture(filePath));
         }
     }
