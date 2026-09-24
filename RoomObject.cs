@@ -6,10 +6,11 @@ namespace Plattslopper;
 public abstract class RoomObject
 {
 	public string tag;
-	protected SpriteDrawer spriteDrawer;
-	public CollisionBox collisionBox;
 	public Vector2f position;
 	public Vector2f size;
+
+	protected SpriteDrawer spriteDrawer;
+	public CollisionBox collisionBox;
 	public bool remove = false; 
 
 	abstract public void Update(float deltaTime);

@@ -6,16 +6,24 @@ namespace Plattslopper;
 public class Room
 {
     public List<RoomObject> RoomObjects = new();
-    SpriteDrawer backGroundDrawer = new();
     string spriteName = "flower";
+
+    public RoomData roomData;
+
+
+    SpriteDrawer backGroundDrawer = new();
     public Room()
     {
         backGroundDrawer.InitializeSprites([spriteName]);
+        roomData = new();
+        roomData.SloppaNerDet();
+        roomData.print();
+
     }
 
     public void Update(float deltaTime)
     {
-        
+
         for (int i = 0; i < RoomObjects.Count; i++)
         {
             //först uppdatera alla värden
@@ -33,5 +41,5 @@ public class Room
             RoomObjects[i].Draw(window); // sen ritar man ut allt till skärmen
         }
     }
-    
+
 }
