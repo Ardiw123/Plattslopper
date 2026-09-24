@@ -102,9 +102,7 @@ public class Player : RoomObject
 
     float DecayVelocity(Vector2f vector, float deltatime)
     {
-        float X = MathF.Abs(vector.X);
-
-        if (X > 0.1)
+        if (MathF.Abs(vector.X) > 0.1)
         {
             return vector.X *= playerMoveDecayConstant;
         }
@@ -136,7 +134,6 @@ public class Player : RoomObject
         }
 
         jumpSteps++;
-		Console.WriteLine(jumpSteps - 1);
 
 		if (KeyboardHandler.IsKeyDown(Keyboard.Key.Space) && jumpSteps <= MAXJUMPSTEPS && isJumping)
         {
