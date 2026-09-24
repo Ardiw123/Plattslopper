@@ -1,4 +1,6 @@
-﻿using SFML.Graphics;
+﻿using System.Diagnostics;
+using System.Security.Cryptography;
+using SFML.Graphics;
 using SFML.System;
 using SFML.Window;
 
@@ -6,7 +8,10 @@ namespace Plattslopper;
 
 public class Player : RoomObject
 {
-    string spriteName = "adolf";
+    public Stack<Key> keys = new();
+
+    public Vector2f direction = new(0, 0);
+
     public Vector2f velocity = new(0, 0);
     bool isGrounded = false;
     bool isJumping = false;
@@ -21,9 +26,10 @@ public class Player : RoomObject
     {
         size = new Vector2f(100, 100);
         collisionBox = new(new(100, 100), size);
-     
+    }
 
-        Console.WriteLine(collisionBox.center);
+    public override void RoomStart()
+    {
         spriteDrawer.InitializeSprites([spriteName]);
     }
 
@@ -31,7 +37,7 @@ public class Player : RoomObject
     {
         Inputs(deltaTime);
 
-		position += velocity;
+        position += velocity;
         collisionBox.position = position;
         collisionBox.size = size;
 
@@ -39,10 +45,31 @@ public class Player : RoomObject
         Vector2f positionChange = new Vector2f(0, 0);
         bool isGroundedNow = false;
 
-		foreach (RoomObject roomObject in Game.currentRoom.RoomObjects)
+        foreach (RoomObject roomObject in Game.currentRoom.RoomObjects)
         {
-            if (roomObject is Player)
-                continue;
+            if (roomObject is Player) continue;
+
+            //dåligt kollisions system
+
+            // if (roomObject is Key)
+            // {
+            //     keys.Append(roomObject as Key);
+            //     // roomObject.Remove();
+            // }
+
+            // if (roomObject is Door)
+            // {
+            //     var d = roomObject as Door;
+            //     if (!d.isUnlocked)
+            //     {
+            //         if (keys.Count <= 1)
+            //         {
+            //             keys.Pop();
+            //             d.isUnlocked = true;
+            //         }
+
+            //     }
+            // }
 
             Collision.Hit hit;
             Vector2f collitionNormal = collisionBox.Collide(roomObject, out hit);
@@ -50,24 +77,24 @@ public class Player : RoomObject
             if (collitionNormal.X == 1 && collitionNormal.Y == 1)
                 continue;
 
-			numberOfCollitions++;
+            numberOfCollitions++;
 
             if (collitionNormal.Y == 0)
             {
-				isGroundedNow = true;
-				cancelJump();
+                isGroundedNow = true;
+                cancelJump();
             }
 
-			velocity.X *= collitionNormal.X;
+            velocity.X *= collitionNormal.X;
             velocity.Y *= collitionNormal.Y;
             positionChange += hit.Normal * hit.Overlap;
-		}
+        }
 
         isGrounded = isGroundedNow;
 
         if (numberOfCollitions > 0)
             position += positionChange / numberOfCollitions;
-	}
+    }
 
     public override void Draw(RenderWindow window)
     {
@@ -91,7 +118,7 @@ public class Player : RoomObject
         {
             isVelocityChanged = true;
             velocityChangeX += playerMoveSpeed * deltatime;
-		}
+        }
 
         if (isVelocityChanged)
             velocity = new Vector2f(velocityChangeX, velocity.Y);
@@ -112,10 +139,10 @@ public class Player : RoomObject
     void Gravity(float deltatime)
     {
         // Temporary floor will be repaced when ther is an actual floor to stand on.
-        if (position.Y >= 500)
+        if (position.Y >= 700)
         {
             isGrounded = true;
-            position.Y = 500;
+            position.Y = 700;
             velocity.Y = 0;
             cancelJump();
             return;
@@ -135,7 +162,7 @@ public class Player : RoomObject
 
         jumpSteps++;
 
-		if (KeyboardHandler.IsKeyDown(Keyboard.Key.Space) && jumpSteps <= MAXJUMPSTEPS && isJumping)
+        if (KeyboardHandler.IsKeyDown(Keyboard.Key.Space) && jumpSteps <= MAXJUMPSTEPS && isJumping)
         {
             velocity += new Vector2f(0, -playerJumpPower * deltatime);
         }

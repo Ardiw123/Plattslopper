@@ -1,20 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using SFML.Graphics;
+﻿using SFML.Graphics;
 using SFML.System;
 namespace Plattslopper;
 
-class Door : RoomObject
+public class Door : RoomObject
 {
+    public bool isUnlocked;
+
+    public Door()
+    {
+        collisionBox = new(new(100, 100), size);
+    }
 
     public override void Update(float deltaTime)
     {
-        throw new NotImplementedException();
+        collisionBox.position = position;
+        collisionBox.size = size;
+        System.Console.WriteLine(isUnlocked);
     }
 
     public override void Draw(RenderWindow window)
     {
-        throw new NotImplementedException();
+        spriteDrawer.DrawSprite(position, size, spriteDrawer.GetSprite(spriteName), window);
+
+        collisionBox.DrawHitbox(window);
     }
+
+    public override void RoomStart()
+    {
+        spriteDrawer.InitializeSprites([spriteName]);
+    }
+
+    
 }

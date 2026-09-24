@@ -1,16 +1,66 @@
 {
   "backgroundName": "flower",
+  "songName": "litefinpianomusik",
   "roomObjects": [
+    {
+      "$type": "door",
+      "spriteName": "gobba",
+      "position": {
+        "X": 1520,
+        "Y": 780
+      },
+      "size": {
+        "X": 100,
+        "Y": 200
+      }
+    },
+
+    {
+      "$type": "key",
+      "spriteName": "red",
+      "position": {
+        "X": 900,
+        "Y": 380
+      },
+      "size": {
+        "X": 80,
+        "Y": 80
+      }
+    },
     {
       "$type": "block",
       "spriteName": "mcnutt",
       "position": {
-        "X": 400,
-        "Y": 400
+        "X": 0,
+        "Y": 1000
       },
       "size": {
-        "X": 300,
-        "Y": 300
+        "X": 1920,
+        "Y": 200
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "båt",
+      "position": {
+        "X": 1720,
+        "Y": 0
+      },
+      "size": {
+        "X": 200,
+        "Y": 1080
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "commanderniall",
+      "position": {
+        "X": 0,
+        "Y": 0
+      },
+      "size": {
+        "X": 200,
+        "Y": 1080
       }
     },
     {
@@ -21,8 +71,8 @@
         "Y": 400
       },
       "size": {
-        "X": 200,
-        "Y": 200
+        "X": 100,
+        "Y": 100
       }
     }
   ]

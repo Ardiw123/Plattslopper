@@ -2,15 +2,28 @@
 
 namespace Plattslopper;
 
-class Key : RoomObject
+public class Key : RoomObject
 {
+    public Key()
+    {
+        collisionBox = new(new(100, 100), size);
+    }
+
     public override void Update(float deltaTime)
     {
-        throw new NotImplementedException();
+        collisionBox.position = position;
+        collisionBox.size = size;
     }
 
     public override void Draw(RenderWindow window)
     {
-        throw new NotImplementedException();
+        spriteDrawer.DrawSprite(position, size, spriteDrawer.GetSprite(spriteName), window);
+
+        collisionBox.DrawHitbox(window);
+    }
+
+    public override void RoomStart()
+    {
+        spriteDrawer.InitializeSprites([spriteName]);
     }
 }

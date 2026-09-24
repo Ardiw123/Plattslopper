@@ -1,5 +1,6 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using SFML.Audio;
 
 namespace Plattslopper;
 
@@ -10,12 +11,12 @@ public struct RoomData
     public static RoomData LoadFromFile(string filePath)
     {
         string json = File.ReadAllText(filePath);
-
         return JsonSerializer.Deserialize<RoomData>(json, new JsonSerializerOptions { IncludeFields = true });
     }
 
     [JsonInclude] public List<RoomObject> roomObjects;
     [JsonInclude] public string backgroundName;
+    [JsonInclude] public string songName;
 
     public RoomData()
     {

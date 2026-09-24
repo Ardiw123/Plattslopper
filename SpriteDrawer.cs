@@ -1,7 +1,6 @@
-using System.Numerics;
 using SFML.Graphics;
 using SFML.System;
-//ni ni n ini
+
 public class SpriteDrawer
 {
     static string spriteDirectory = "sprites";
@@ -10,41 +9,52 @@ public class SpriteDrawer
 
     public static void InitilizeAllSprites()
     {
-        //får alla wav filer i assets och sparar de i en dictionary
+        AllSprites.Clear();
+
         foreach (string filePath in Directory.EnumerateFiles(spriteDirectory, "*.png"))
         {
             string name = Path.GetFileNameWithoutExtension(filePath);
-           // System.Console.WriteLine(name);
             AllSprites[name] = new Sprite(new Texture(filePath));
         }
     }
 
     static Sprite GetStaticSprite(string spriteName)
     {
-        //if it gets a string that doesnt exist it doesnt crash😂😂
         if (AllSprites.TryGetValue(spriteName, out Sprite sprite))
         {
             return sprite;
         }
-        else return new(new Texture("flower"));
+
+        throw new KeyNotFoundException($"Hittade inte {spriteName} inuti sloppet: {spriteDirectory}.");
     }
 
-    Dictionary<string, Sprite> sprites = new();
+    Dictionary<string, Sprite> sprites = new(StringComparer.OrdinalIgnoreCase);
 
     public Sprite GetSprite(string spriteName)
     {
-        return sprites[spriteName];
+        if (sprites.TryGetValue(spriteName, out Sprite sprite))
+        {
+            return sprite;
+        }
+
+        return GetStaticSprite(spriteName);
     }
 
     public void InitializeSprites(string[] spriteNames)
     {
         for (int i = 0; i < spriteNames.Length; i++)
         {
-            sprites.Add(spriteNames[i], GetStaticSprite(spriteNames[i]));
+            string spriteName = spriteNames[i];
+
+            //dubbelcheckar att den finns så att inget blir fel
+            if (!sprites.ContainsKey(spriteName))
+            {
+                sprites[spriteName] = GetStaticSprite(spriteName);
+            }
         }
     }
 
-     public void DrawSprite(Vector2f position, Vector2f size,Sprite sprite, RenderWindow window)
+    public void DrawSprite(Vector2f position, Vector2f size, Sprite sprite, RenderWindow window)
     {
         sprite.Position = position;
         sprite.Scale = new Vector2f(size.X / sprite.Texture.Size.X, size.Y / sprite.Texture.Size.Y);

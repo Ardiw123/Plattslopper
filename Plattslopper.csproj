@@ -20,6 +20,13 @@
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</EmbeddedResource>
 	</ItemGroup>
+
+     <ItemGroup>
+		<None Remove="musik/*.wav" />
+		<EmbeddedResource Include="musik/*.wav">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</EmbeddedResource>
+	</ItemGroup>
 	
   <ItemGroup>
     <PackageReference Include="CSFML" Version="2.5.0" />
