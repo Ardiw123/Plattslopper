@@ -125,9 +125,17 @@ public class Player : RoomObject
 
     public override void Draw(RenderWindow window)
     {
-        spriteDrawer.DrawSprite(position, size, spriteDrawer.GetSprite(spriteName), window, isLeft);
+        if (velocity.X == 0)
+        {
+            spriteDrawer.DrawSprite(position, size, spriteDrawer.GetSprite(spriteName), window, isLeft, new IntRect(0, 0, 24, 24));
+        }
+        else
+        {
+            Animate(window);
+        }
+
         gui.DisplayedString = $"coins: {coins}";
-        gui.Position = new Vector2f(400, 400);
+        gui.Position = new Vector2f(40, 400);
         gui.FillColor = Color.Red;
         gui.OutlineThickness = 10;
         gui.OutlineColor = Color.Black;
@@ -136,6 +144,27 @@ public class Player : RoomObject
 
         collisionBox.DrawHitbox(window);
     }
+    int slop = 0;
+    public void Animate(RenderWindow window)
+    {
+        slop++;
+        if (slop < 30)
+        {
+            spriteDrawer.DrawSprite(position, size, spriteDrawer.GetSprite(spriteName), window, isLeft, new IntRect(0, 0, 24, 24));
+        }
+        else if (slop > 30)
+        {
+            spriteDrawer.DrawSprite(position, size, spriteDrawer.GetSprite(spriteName), window, isLeft, new IntRect(24, 0, 24, 24));
+        }
+
+        if (slop > 60)
+        {
+            slop = 0;
+        }
+    }
+
+
+
 
     void Inputs(float deltatime)
     {

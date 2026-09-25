@@ -18,7 +18,7 @@
     },
      {
       "$type": "coin",
-      "spriteName": "commanderniall",
+      "spriteName": "tileset",
       "position": {
         "X": 472,
         "Y": 800
@@ -31,7 +31,7 @@
     },
      {
       "$type": "coin",
-      "spriteName": "commanderniall",
+   "spriteName": "tileset",
       "position": {
         "X": 567,
         "Y": 945
@@ -213,7 +213,7 @@
     },
     {
       "$type": "player",
-      "spriteName": "adolf",
+      "spriteName": "characters",
       "position": {
         "X": 472.5,
         "Y": 202.5

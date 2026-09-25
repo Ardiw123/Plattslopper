@@ -4,10 +4,31 @@ namespace Plattslopper;
 
 public class Coin : RoomObject
 {
-    
+
     public Coin()
     {
         collisionBox = new(new(100, 100), size);
+    }
+
+    int slop = 0;
+
+    public void Animate(RenderWindow window)
+    {
+        slop++;
+        if (slop < 30)
+        {
+            spriteDrawer.DrawSprite(position, size, spriteDrawer.GetSprite(spriteName), window, new IntRect(198, 162 - 36, 18, 18));
+        }
+        else if (slop > 30)
+        {
+            spriteDrawer.DrawSprite(position, size, spriteDrawer.GetSprite(spriteName), window, new IntRect(198 + 18, 162 - 36, 18, 18));
+        }
+
+        if (slop > 60)
+        {
+            slop = 0;
+        }
+
     }
 
     public override void Update(float deltaTime)
@@ -18,8 +39,7 @@ public class Coin : RoomObject
 
     public override void Draw(RenderWindow window)
     {
-        spriteDrawer.DrawSprite(position, size, spriteDrawer.GetSprite(spriteName), window);
-
+        Animate(window);
         collisionBox.DrawHitbox(window);
     }
 
@@ -28,5 +48,5 @@ public class Coin : RoomObject
         spriteDrawer.InitializeSprites([spriteName]);
     }
 
-    
+
 }

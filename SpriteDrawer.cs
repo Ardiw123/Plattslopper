@@ -40,7 +40,7 @@ public class SpriteDrawer
     }
 
     public void InitializeSprites(string[] spriteNames)
-    { 
+    {
         for (int i = 0; i < spriteNames.Length; i++)
         {
             string spriteName = spriteNames[i];
@@ -60,31 +60,40 @@ public class SpriteDrawer
         window.Draw(sprite);
     }
 
-    public void DrawSprite(Vector2f position, Vector2f size, Sprite sprite, RenderWindow window, bool flip)
+    public void DrawSprite(Vector2f position, Vector2f size, Sprite sprite, RenderWindow window, bool flip, IntRect region)
     {
-        sprite.Origin = new Vector2f(sprite.Texture.Size.X / 2, sprite.Texture.Size.Y / 2);
-        Vector2f scale = new Vector2f(size.X / sprite.Texture.Size.X, size.Y / sprite.Texture.Size.Y);
+        Sprite spriteToDraw = DivideSprite(position, size, sprite, region);
 
-        if (flip)
-            scale.X *= -1;
-        else
-            scale.X *= 1;
+        Vector2f scale = new Vector2f(size.X / region.Width, size.Y / region.Height);
+        scale.X = flip ? -Math.Abs(scale.X) : Math.Abs(scale.X);
 
-        sprite.Scale = scale;
+        spriteToDraw.Scale = scale;
+        spriteToDraw.Position = position + new Vector2f(size.X / 2f, size.Y / 2f);
 
-        sprite.Position = position + new Vector2f(size.X / 2, size.Y / 2);
+        window.Draw(spriteToDraw);
+    }
 
-        window.Draw(sprite);
+    Sprite DivideSprite(Vector2f position, Vector2f size, Sprite sprite, IntRect region)
+    {
+        Sprite spriteToDraw = new Sprite(sprite);
+        spriteToDraw.TextureRect = region;
+        spriteToDraw.Origin = new Vector2f(region.Width / 2f, region.Height / 2f);
+        spriteToDraw.Position = position + new Vector2f(size.X / 2f, size.Y / 2f);
+        spriteToDraw.Scale = new Vector2f(size.X / region.Width, size.Y / region.Height);
+
+        return spriteToDraw;
     }
 
     public void DrawSprite(Vector2f position, Vector2f size, Sprite sprite, RenderWindow window, IntRect region)
     {
-        Sprite niklasAdolfus = sprite;
-        niklasAdolfus.TextureRect = region;
+        /*  Sprite niklasAdolfus = sprite;
+          niklasAdolfus.TextureRect = region;
 
-        niklasAdolfus.Position = position;
-        //niklasAdolfus.Scale = new Vector2f(size.X / niklasAdolfus.Texture.Size.X, size.Y / niklasAdolfus.Texture.Size.Y);
-        niklasAdolfus.Scale = new Vector2f(size.X / region.Width, size.Y / region.Height);
-        window.Draw(sprite);
+          niklasAdolfus.Position = position;
+          niklasAdolfus.Scale = new Vector2f(size.X / region.Width, size.Y / region.Height);*/
+
+        Sprite sprite1 = DivideSprite(position, size, sprite, region);
+
+        window.Draw(sprite1);
     }
 }
