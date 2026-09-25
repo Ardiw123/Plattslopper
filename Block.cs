@@ -14,6 +14,11 @@ public class Block : RoomObject
         collisionBox = new(new(100, 100), size);
     }
 
+    public void Animate()
+    {
+        
+    }
+
     public override void Update(float deltaTime)
     {
         collisionBox.position = position;

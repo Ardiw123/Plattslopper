@@ -16,6 +16,32 @@
         "Y": 67.5
       }
     },
+     {
+      "$type": "coin",
+      "spriteName": "commanderniall",
+      "position": {
+        "X": 472,
+        "Y": 800
+
+      },
+      "size": {
+        "X": 67.5,
+        "Y": 67.5
+      }
+    },
+     {
+      "$type": "coin",
+      "spriteName": "commanderniall",
+      "position": {
+        "X": 567,
+        "Y": 945
+        
+      },
+      "size": {
+        "X": 67.5,
+        "Y": 67.5
+      }
+    },
     {
       "$type": "key",
       "spriteName": "tileset",
@@ -79,7 +105,7 @@
     },
     {
       "$type": "block",
-      "spriteName": "red",
+      "spriteName": "gobba",
       "position": {
         "X": 405,
         "Y": 1012.5
