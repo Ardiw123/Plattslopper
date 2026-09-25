@@ -41,7 +41,7 @@ public class SpriteDrawer
     }
 
     public void InitializeSprites(string[] spriteNames)
-    {
+    { 
         for (int i = 0; i < spriteNames.Length; i++)
         {
             string spriteName = spriteNames[i];
@@ -58,6 +58,23 @@ public class SpriteDrawer
     {
         sprite.Position = position;
         sprite.Scale = new Vector2f(size.X / sprite.Texture.Size.X, size.Y / sprite.Texture.Size.Y);
+        window.Draw(sprite);
+    }
+
+    public void DrawSprite(Vector2f position, Vector2f size, Sprite sprite, RenderWindow window, bool flip)
+    {
+        sprite.Origin = new Vector2f(sprite.Texture.Size.X / 2, sprite.Texture.Size.Y / 2);
+        Vector2f scale = new Vector2f(size.X / sprite.Texture.Size.X, size.Y / sprite.Texture.Size.Y);
+
+        if (flip)
+            scale.X *= -1;
+        else
+            scale.X *= 1;
+
+        sprite.Scale = scale;
+
+        sprite.Position = position + new Vector2f(34, 35);
+
         window.Draw(sprite);
     }
 

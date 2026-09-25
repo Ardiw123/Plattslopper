@@ -20,6 +20,7 @@ public class Player : RoomObject
     int playerJumpPower = 200;
     const float playerMoveDecayConstant = 0.6f;
     int playerGravity = 75;
+    bool isLeft = false;
 
 
     public Player()
@@ -124,7 +125,7 @@ public class Player : RoomObject
 
     public override void Draw(RenderWindow window)
     {
-        spriteDrawer.DrawSprite(position, size, spriteDrawer.GetSprite(spriteName), window);
+        spriteDrawer.DrawSprite(position, size, spriteDrawer.GetSprite(spriteName), window, isLeft);
         gui.DisplayedString = $"coins: {coins}";
         gui.Position = new Vector2f(400, 400);
         gui.FillColor = Color.Red;
@@ -145,11 +146,13 @@ public class Player : RoomObject
         if (KeyboardHandler.IsKeyDown(Keyboard.Key.A))
         {
             isVelocityChanged = true;
+            isLeft = true;
             velocityChangeX += -playerMoveSpeed * deltatime;
         }
         if (KeyboardHandler.IsKeyDown(Keyboard.Key.D))
         {
             isVelocityChanged = true;
+            isLeft = false;
             velocityChangeX += playerMoveSpeed * deltatime;
         }
 
