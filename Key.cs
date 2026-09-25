@@ -4,6 +4,8 @@ namespace Plattslopper;
 
 public class Key : RoomObject
 {
+    public string keyId;
+
     public Key()
     {
         collisionBox = new(new(100, 100), size);
@@ -25,5 +27,15 @@ public class Key : RoomObject
     public override void RoomStart()
     {
         spriteDrawer.InitializeSprites([spriteName]);
+    }
+
+    public void SendKeyId()
+    {
+        var currentDoors = Game.currentRoom.RoomObjects.Where(c => c is Door).ToList();
+        foreach (Door door in currentDoors)
+        {
+            if (keyId == door.doorId)
+                door.isUnlocked = true;
+        }
     }
 }

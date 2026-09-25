@@ -1,8 +1,9 @@
-﻿using System.Diagnostics;
-using System.Security.Cryptography;
-using SFML.Graphics;
+﻿using SFML.Graphics;
 using SFML.System;
 using SFML.Window;
+using System.Diagnostics;
+using System.Security.Cryptography;
+using static SFML.Window.Keyboard;
 
 namespace Plattslopper;
 
@@ -17,10 +18,10 @@ public class Player : RoomObject
     bool isJumping = false;
     const int MAXJUMPSTEPS = 7;
     int jumpSteps = 0;
-    int playerMoveSpeed = 800;
-    int playerJumpPower = 250;
+    int playerMoveSpeed = 400;
+    int playerJumpPower = 150;
     const float playerMoveDecayConstant = 0.6f;
-    int playerGravity = 100;
+    int playerGravity = 50;
 
     public Player()
     {
@@ -51,25 +52,46 @@ public class Player : RoomObject
 
             //dåligt kollisions system
 
-            // if (roomObject is Key)
-            // {
-            //     keys.Append(roomObject as Key);
-            //     // roomObject.Remove();
-            // }
+            if (roomObject is Key)
+            {
+                Key key = (Key)roomObject;
+                
+                if (Collision.RectangleRectangle(key.collisionBox.collisionBoxRect, this.collisionBox.collisionBoxRect, out Collision.Hit keyHit))
+                {
+					key.SendKeyId();
+                    key.remove = true;
+				}
 
-            // if (roomObject is Door)
-            // {
-            //     var d = roomObject as Door;
-            //     if (!d.isUnlocked)
-            //     {
-            //         if (keys.Count <= 1)
-            //         {
-            //             keys.Pop();
-            //             d.isUnlocked = true;
-            //         }
+                 //keys.Append(roomObject as Key);
+                 //roomObject.Remove();
+             }
 
-            //     }
-            // }
+             if (roomObject is Door)
+             {
+                Door door = (Door)roomObject;
+
+                if (door.isUnlocked)
+                {
+					if (Collision.RectangleRectangle(door.collisionBox.collisionBoxRect, this.collisionBox.collisionBoxRect, out Collision.Hit doorHit))
+					{
+						foreach (RoomObject roomObjectRemove in Game.currentRoom.RoomObjects)
+							roomObjectRemove.remove = true;
+						door.ChangeRoom();
+					}
+				}
+                /*
+                 var d = roomObject as Door;
+                 if (!d.isUnlocked)
+                 {
+                     if (keys.Count >= 1)
+                     {
+                         keys.Pop();
+                         d.isUnlocked = true;
+                     }
+
+                 }
+                */
+             }
 
             Collision.Hit hit;
             Vector2f collitionNormal = collisionBox.Collide(roomObject, out hit);
@@ -138,6 +160,7 @@ public class Player : RoomObject
 
     void Gravity(float deltatime)
     {
+        /*
         // Temporary floor will be repaced when ther is an actual floor to stand on.
         if (position.Y >= 700)
         {
@@ -147,6 +170,7 @@ public class Player : RoomObject
             cancelJump();
             return;
         }
+        */
 
         velocity.Y += playerGravity * deltatime;
     }

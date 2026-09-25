@@ -5,6 +5,8 @@ namespace Plattslopper;
 public class Door : RoomObject
 {
     public bool isUnlocked;
+    public string doorId;
+    public string nextRoomName;
 
     public Door()
     {
@@ -15,7 +17,7 @@ public class Door : RoomObject
     {
         collisionBox.position = position;
         collisionBox.size = size;
-        System.Console.WriteLine(isUnlocked);
+		System.Console.WriteLine(isUnlocked);
     }
 
     public override void Draw(RenderWindow window)
@@ -30,5 +32,8 @@ public class Door : RoomObject
         spriteDrawer.InitializeSprites([spriteName]);
     }
 
-    
+    public void ChangeRoom()
+    {
+        Game.currentRoom = Room.MakeRoomFromRoomData(RoomData.LoadFromFile("levels/" + nextRoomName));
+	}
 }

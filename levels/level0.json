@@ -5,6 +5,8 @@
     {
       "$type": "door",
       "spriteName": "gobba",
+      "doorId": "levelkey1",
+      "nextRoomName": "level1.json",
       "position": {
         "X": 1520,
         "Y": 780
@@ -18,9 +20,10 @@
     {
       "$type": "key",
       "spriteName": "red",
+      "keyId": "levelkey1",
       "position": {
         "X": 900,
-        "Y": 380
+        "Y": 700
       },
       "size": {
         "X": 80,
