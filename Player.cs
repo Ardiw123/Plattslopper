@@ -2,18 +2,15 @@
 using SFML.System;
 using SFML.Window;
 using System.Diagnostics;
-using System.Security.Cryptography;
-using static SFML.Window.Keyboard;
 
 namespace Plattslopper;
 
 public class Player : RoomObject
 {
 	public Stack<Key> keys = new();
-
 	public Vector2f direction = new(0, 0);
-
 	public Vector2f velocity = new(0, 0);
+	public Vector2f startPosition;
 	bool isGrounded = false;
 	bool isJumping = false;
 	const int MAXJUMPSTEPS = 7;
@@ -22,6 +19,7 @@ public class Player : RoomObject
 	int playerJumpPower = 200;
 	const float playerMoveDecayConstant = 0.6f;
 	int playerGravity = 75;
+
 
 	public Player()
 	{
@@ -36,6 +34,9 @@ public class Player : RoomObject
 
 	public override void Update(float deltaTime)
 	{
+		if (position.Y > Game.WindowSize.Y)
+			position = startPosition;
+
 		Inputs(deltaTime);
 
 		position += velocity;

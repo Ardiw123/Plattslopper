@@ -1,337 +1,341 @@
 {
-"backgroundName": "flower",
-"songName": "litefinpianomusik",
-"roomObjects": [
-{
-"$type": "door",
-"spriteName": "gobba",
-"doorId": "levelkey1",
-"nextRoomName": "level0.json",
-"position": {
-"X": 452,
-"Y": 952.5
-},
-"size": {
-"X": 67.5,
-"Y": 67.5
-}
-},
-{
-"$type": "key",
-"spriteName": "red",
-"keyId": "levelkey1",
-"position": {
-"X": 960,
-"Y": 202.5
-},
-"size": {
-"X": 67.5,
-"Y": 67.5
-}
-},
-{
-"$type": "player",
-"spriteName": "adolf",
-"position": {
-"X": 452,
-"Y": 202.5
-},
-"size": {
-"X": 67.5,
-"Y": 67.5
-}
-},
+  "backgroundName": "flower",
+  "songName": "litefinpianomusik",
+  "roomObjects": [
+    {
+      "$type": "door",
+      "spriteName": "gobba",
+      "doorId": "levelkey1",
+      "nextRoomName": "level0.json",
+      "position": {
+        "X": 452,
+        "Y": 952.5
+      },
+      "size": {
+        "X": 67.5,
+        "Y": 67.5
+      }
+    },
+    {
+      "$type": "key",
+      "spriteName": "red",
+      "keyId": "levelkey1",
+      "position": {
+        "X": 960,
+        "Y": 202.5
+      },
+      "size": {
+        "X": 67.5,
+        "Y": 67.5
+      }
+    },
+    {
+      "$type": "player",
+      "spriteName": "adolf",
+      "position": {
+        "X": 452,
+        "Y": 202.5
+      },
+      "size": {
+        "X": 67.5,
+        "Y": 67.5
+      },
+      "startPosition": {
+        "X": 452,
+        "Y": 202.5
+      }
+    },
 
-{
-  "$type": "block",
-  "spriteName": "mcnutt",
-  "position": {
-    "X": 325,
-    "Y": 0
-  },
-  "size": {
-    "X": 67.5,
-    "Y": 1080
-  }
-},
-{
-  "$type": "block",
-  "spriteName": "mcnutt",
-  "position": {
-    "X": 1595,
-    "Y": 0
-  },
-  "size": {
-    "X": 67.5,
-    "Y": 1080
-  }
-},
-{
-  "$type": "block",
-  "spriteName": "mcnutt",
-  "position": {
-    "X": 392.5,
-    "Y": 67.5
-  },
-  "size": {
-    "X": 1202.5,
-    "Y": 67.5
-  }
-},
-{
-  "$type": "block",
-  "spriteName": "mcnutt",
-  "position": {
-    "X": 392.5,
-    "Y": 1012.5
-  },
-  "size": {
-    "X": 270,
-    "Y": 67.5
-  }
-},
-{
-  "$type": "block",
-  "spriteName": "mcnutt",
-  "position": {
-    "X": 865,
-    "Y": 1012.5
-  },
-  "size": {
-    "X": 67.5,
-    "Y": 67.5
-  }
-},
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 325,
+        "Y": 0
+      },
+      "size": {
+        "X": 67.5,
+        "Y": 1080
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 1595,
+        "Y": 0
+      },
+      "size": {
+        "X": 67.5,
+        "Y": 1080
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 392.5,
+        "Y": 0
+      },
+      "size": {
+        "X": 1202.5,
+        "Y": 67.5
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 392.5,
+        "Y": 1012.5
+      },
+      "size": {
+        "X": 270,
+        "Y": 67.5
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 865,
+        "Y": 1012.5
+      },
+      "size": {
+        "X": 67.5,
+        "Y": 67.5
+      }
+    },
 
-{
-  "$type": "block",
-  "spriteName": "mcnutt",
-  "position": {
-    "X": 392.5,
-    "Y": 405
-  },
-  "size": {
-    "X": 202.5,
-    "Y": 67.5
-  }
-},
-{
-  "$type": "block",
-  "spriteName": "mcnutt",
-  "position": {
-    "X": 865,
-    "Y": 135
-  },
-  "size": {
-    "X": 67.5,
-    "Y": 337.5
-  }
-},
-{
-  "$type": "block",
-  "spriteName": "mcnutt",
-  "position": {
-    "X": 865,
-    "Y": 607.5
-  },
-  "size": {
-    "X": 67.5,
-    "Y": 337.5
-  }
-},
-{
-  "$type": "block",
-  "spriteName": "mcnutt",
-  "position": {
-    "X": 1000,
-    "Y": 337.5
-  },
-  "size": {
-    "X": 337.5,
-    "Y": 67.5
-  }
-},
-{
-  "$type": "block",
-  "spriteName": "mcnutt",
-  "position": {
-    "X": 1470,
-    "Y": 675
-  },
-  "size": {
-    "X": 202.5,
-    "Y": 67.5
-  }
-},
-{
-  "$type": "block",
-  "spriteName": "mcnutt",
-  "position": {
-    "X": 527.5,
-    "Y": 742.5
-  },
-  "size": {
-    "X": 67.5,
-    "Y": 67.5
-  }
-},
-{
-  "$type": "block",
-  "spriteName": "mcnutt",
-  "position": {
-    "X": 865,
-    "Y": 945
-  },
-  "size": {
-    "X": 67.5,
-    "Y": 67.5
-  }
-},
-{
-  "$type": "block",
-  "spriteName": "mcnutt",
-  "position": {
-    "X": 1067.5,
-    "Y": 810
-  },
-  "size": {
-    "X": 67.5,
-    "Y": 67.5
-  }
-},
-{
-  "$type": "block",
-  "spriteName": "mcnutt",
-  "position": {
-    "X": 1067.5,
-    "Y": 607.5
-  },
-  "size": {
-    "X": 202.5,
-    "Y": 67.5
-  }
-},
-{
-  "$type": "block",
-  "spriteName": "mcnutt",
-  "position": {
-    "X": 1067.5,
-    "Y": 810
-  },
-  "size": {
-    "X": 67.5,
-    "Y": 67.5
-  }
-},
-{
-  "$type": "block",
-  "spriteName": "mcnutt",
-  "position": {
-    "X": 1067.5,
-    "Y": 742.5
-  },
-  "size": {
-    "X": 67.5,
-    "Y": 67.5
-  }
-},
-{
-  "$type": "block",
-  "spriteName": "mcnutt",
-  "position": {
-    "X": 1067.5,
-    "Y": 675
-  },
-  "size": {
-    "X": 67.5,
-    "Y": 67.5
-  }
-},
-{
-  "$type": "block",
-  "spriteName": "mcnutt",
-  "position": {
-    "X": 1270,
-    "Y": 540
-  },
-  "size": {
-    "X": 202.5,
-    "Y": 67.5
-  }
-},
-{
-  "$type": "block",
-  "spriteName": "mcnutt",
-  "position": {
-    "X": 865,
-    "Y": 540
-  },
-  "size": {
-    "X": 67.5,
-    "Y": 337.5
-  }
-},
-{
-  "$type": "block",
-  "spriteName": "mcnutt",
-  "position": {
-    "X": 1270,
-    "Y": 540
-  },
-  "size": {
-    "X": 202.5,
-    "Y": 67.5
-  }
-},
-{
-  "$type": "block",
-  "spriteName": "mcnutt",
-  "position": {
-    "X": 1270,
-    "Y": 810
-  },
-  "size": {
-    "X": 67.5,
-    "Y": 67.5
-  }
-},
-{
-  "$type": "block",
-  "spriteName": "mcnutt",
-  "position": {
-    "X": 865,
-    "Y": 337.5
-  },
-  "size": {
-    "X": 67.5,
-    "Y": 67.5
-  }
-},
-{
-  "$type": "block",
-  "spriteName": "mcnutt",
-  "position": {
-    "X": 1270,
-    "Y": 945
-  },
-  "size": {
-    "X": 67.5,
-    "Y": 67.5
-  }
-},
-{
-  "$type": "block",
-  "spriteName": "mcnutt",
-  "position": {
-    "X": 1067.5,
-    "Y": 270
-  },
-  "size": {
-    "X": 67.5,
-    "Y": 67.5
-  }
-}
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 392.5,
+        "Y": 405
+      },
+      "size": {
+        "X": 202.5,
+        "Y": 67.5
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 865,
+        "Y": 135
+      },
+      "size": {
+        "X": 67.5,
+        "Y": 337.5
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 865,
+        "Y": 607.5
+      },
+      "size": {
+        "X": 67.5,
+        "Y": 337.5
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 1000,
+        "Y": 337.5
+      },
+      "size": {
+        "X": 337.5,
+        "Y": 67.5
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 1470,
+        "Y": 675
+      },
+      "size": {
+        "X": 202.5,
+        "Y": 67.5
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 527.5,
+        "Y": 742.5
+      },
+      "size": {
+        "X": 67.5,
+        "Y": 67.5
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 865,
+        "Y": 945
+      },
+      "size": {
+        "X": 67.5,
+        "Y": 67.5
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 1067.5,
+        "Y": 810
+      },
+      "size": {
+        "X": 67.5,
+        "Y": 67.5
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 1067.5,
+        "Y": 607.5
+      },
+      "size": {
+        "X": 202.5,
+        "Y": 67.5
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 1067.5,
+        "Y": 810
+      },
+      "size": {
+        "X": 67.5,
+        "Y": 67.5
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 1067.5,
+        "Y": 742.5
+      },
+      "size": {
+        "X": 67.5,
+        "Y": 67.5
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 1067.5,
+        "Y": 675
+      },
+      "size": {
+        "X": 67.5,
+        "Y": 67.5
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 1270,
+        "Y": 540
+      },
+      "size": {
+        "X": 202.5,
+        "Y": 67.5
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 865,
+        "Y": 540
+      },
+      "size": {
+        "X": 67.5,
+        "Y": 337.5
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 1270,
+        "Y": 540
+      },
+      "size": {
+        "X": 202.5,
+        "Y": 67.5
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 1270,
+        "Y": 810
+      },
+      "size": {
+        "X": 67.5,
+        "Y": 67.5
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 865,
+        "Y": 337.5
+      },
+      "size": {
+        "X": 67.5,
+        "Y": 67.5
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 1270,
+        "Y": 945
+      },
+      "size": {
+        "X": 67.5,
+        "Y": 67.5
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 1067.5,
+        "Y": 270
+      },
+      "size": {
+        "X": 67.5,
+        "Y": 67.5
+      }
+    }
 
 
-]
+  ]
 }

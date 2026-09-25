@@ -14,7 +14,7 @@ public static class Game
 
     static void LoadRoom()
     {
-        currentRoom = Room.MakeRoomFromRoomData(RoomData.LoadFromFile("levels/level0.json"));
+        currentRoom = Room.MakeRoomFromRoomData(RoomData.LoadFromFile("levels/level1.json"));
         currentRoom.roomData.print();
         currentRoom.RoomObjects.AddRange(currentRoom.roomData.roomObjects);
 
