@@ -1,6 +1,6 @@
 {
   "backgroundName": "flower",
-  "songName": "song",
+  "songName": "litefinpianomusik",
   "roomObjects": [
     {
       "$type": "door",
@@ -31,7 +31,7 @@
     },
     {
       "$type": "block",
-      "spriteName": "mcnutt",
+      "spriteName": "commanderniall",
       "position": {
         "X": 0,
         "Y": 0
@@ -127,7 +127,7 @@
     },
     {
       "$type": "block",
-      "spriteName": "mcnutt",
+      "spriteName": "gobba",
       "position": {
         "X": 960,
         "Y": 337.5

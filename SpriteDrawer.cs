@@ -24,7 +24,6 @@ public class SpriteDrawer
         {
             return sprite;
         }
-
         throw new KeyNotFoundException($"Hittade inte {spriteName} inuti sloppet: {spriteDirectory}.");
     }
 
