@@ -1,10 +1,10 @@
 {
   "backgroundName": "flower",
-  "songName": "litefinpianomusik",
+  "songName": "song",
   "roomObjects": [
     {
       "$type": "door",
-      "spriteName": "gobba",
+      "spriteName": "tileset",
       "doorId": "levelkey1",
       "nextRoomName": "level0.json",
       "position": {
@@ -16,9 +16,35 @@
         "Y": 67.5
       }
     },
+     {
+      "$type": "coin",
+      "spriteName": "commanderniall",
+      "position": {
+        "X": 472,
+        "Y": 800
+
+      },
+      "size": {
+        "X": 67.5,
+        "Y": 67.5
+      }
+    },
+     {
+      "$type": "coin",
+      "spriteName": "commanderniall",
+      "position": {
+        "X": 567,
+        "Y": 945
+        
+      },
+      "size": {
+        "X": 67.5,
+        "Y": 67.5
+      }
+    },
     {
       "$type": "key",
-      "spriteName": "red",
+      "spriteName": "tileset",
       "keyId": "levelkey1",
       "position": {
         "X": 1080,
@@ -30,26 +56,8 @@
       }
     },
     {
-      "$type": "player",
-      "spriteName": "adolf",
-      "position": {
-        "X": 472.5,
-        "Y": 202.5
-      },
-      "size": {
-        "X": 67.5,
-        "Y": 67.5
-      },
-      "startPosition": {
-        "X": 472.5,
-        "Y": 202.5
-      }
-    },
-
-
-    {
       "$type": "block",
-      "spriteName": "mcnutt",
+      "spriteName": "båt",
       "position": {
         "X": 0,
         "Y": 0
@@ -61,7 +69,7 @@
     },
     {
       "$type": "block",
-      "spriteName": "mcnutt",
+      "spriteName": "båt",
       "position": {
         "X": 1552.5,
         "Y": 0
@@ -73,7 +81,7 @@
     },
     {
       "$type": "block",
-      "spriteName": "mcnutt",
+      "spriteName": "flower",
       "position": {
         "X": 405,
         "Y": 0
@@ -83,8 +91,6 @@
         "Y": 67.5
       }
     },
-
-
     {
       "$type": "block",
       "spriteName": "mcnutt",
@@ -99,7 +105,7 @@
     },
     {
       "$type": "block",
-      "spriteName": "mcnutt",
+      "spriteName": "gobba",
       "position": {
         "X": 405,
         "Y": 1012.5
@@ -123,7 +129,7 @@
     },
     {
       "$type": "block",
-      "spriteName": "mcnutt",
+      "spriteName": "flower",
       "position": {
         "X": 877.5,
         "Y": 607.5
@@ -133,7 +139,6 @@
         "Y": 472.5
       }
     },
-
     {
       "$type": "block",
       "spriteName": "mcnutt",
@@ -160,17 +165,16 @@
     },
     {
       "$type": "block",
-      "spriteName": "mcnutt",
+      "spriteName": "flower",
       "position": {
         "X": 1147.5,
         "Y": 607.5
       },
       "size": {
         "X": 405,
-        "Y": 67.5
+        "Y": 300
       }
     },
-  
     {
       "$type": "block",
       "spriteName": "mcnutt",
@@ -185,7 +189,7 @@
     },
     {
       "$type": "block",
-      "spriteName": "mcnutt",
+      "spriteName": "flower",
       "position": {
         "X": 1282.5,
         "Y": 540
@@ -197,7 +201,7 @@
     },
     {
       "$type": "block",
-      "spriteName": "mcnutt",
+      "spriteName": "flower",
       "position": {
         "X": 1080,
         "Y": 270
@@ -205,6 +209,22 @@
       "size": {
         "X": 67.5,
         "Y": 67.5
+      }
+    },
+    {
+      "$type": "player",
+      "spriteName": "adolf",
+      "position": {
+        "X": 472.5,
+        "Y": 202.5
+      },
+      "size": {
+        "X": 67.5,
+        "Y": 67.5
+      },
+      "startPosition": {
+        "X": 472.5,
+        "Y": 202.5
       }
     }
   ]

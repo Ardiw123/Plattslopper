@@ -1,6 +1,6 @@
 {
-  "backgroundName": "flower",
-  "songName": "song",
+  "backgroundName": "gibb",
+  "songName": "litefinpianomusik",
   "roomObjects": [
     {
       "$type": "door",
@@ -10,6 +10,56 @@
       "position": {
         "X": 1500,
         "Y": 945
+      },
+      "size": {
+        "X": 67.5,
+        "Y": 67.5
+      }
+    },
+     {
+      "$type": "coin",
+      "spriteName": "commanderniall",
+      "position": {
+        "X": 1400,
+        "Y": 945
+      },
+      "size": {
+        "X": 67.5,
+        "Y": 67.5
+      }
+    },
+    {
+      "$type": "coin",
+      "spriteName": "commanderniall",
+      "position": {
+        "X": 1300,
+        "Y": 945
+      },
+      "size": {
+        "X": 67.5,
+        "Y": 67.5
+      }
+    },
+
+    {
+      "$type": "coin",
+      "spriteName": "commanderniall",
+      "position": {
+        "X": 1200,
+        "Y": 945
+      },
+      "size": {
+        "X": 67.5,
+        "Y": 67.5
+      }
+    },
+
+    {
+      "$type": "coin",
+      "spriteName": "commanderniall",
+      "position": {
+        "X": 1300,
+        "Y": 400
       },
       "size": {
         "X": 67.5,
@@ -31,7 +81,7 @@
     },
     {
       "$type": "block",
-      "spriteName": "mcnutt",
+      "spriteName": "commanderniall",
       "position": {
         "X": 0,
         "Y": 0
@@ -55,7 +105,7 @@
     },
     {
       "$type": "block",
-      "spriteName": "mcnutt",
+      "spriteName": "flower",
       "position": {
         "X": 352.5,
         "Y": 1012.5
@@ -79,7 +129,7 @@
     },
     {
       "$type": "block",
-      "spriteName": "mcnutt",
+      "spriteName": "flower",
       "position": {
         "X": 555,
         "Y": 810
@@ -103,7 +153,7 @@
     },
     {
       "$type": "block",
-      "spriteName": "mcnutt",
+      "spriteName": "flower",
       "position": {
         "X": 1095,
         "Y": 540
@@ -127,7 +177,7 @@
     },
     {
       "$type": "block",
-      "spriteName": "mcnutt",
+      "spriteName": "gobba",
       "position": {
         "X": 960,
         "Y": 337.5
