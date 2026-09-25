@@ -28,6 +28,16 @@ public class SpriteDrawer
         throw new KeyNotFoundException($"Hittade inte {spriteName} inuti sloppet: {spriteDirectory}.");
     }
 
+    static Sprite GetStatic(string spriteName, IntRect region)
+    {
+        if (AllSprites.TryGetValue(spriteName, out Sprite NiklasAdolfus))
+        {
+            NiklasAdolfus.TextureRect = new IntRect(0, 0, 18, 18);
+            return NiklasAdolfus;
+        }
+        throw new KeyNotFoundException($"Hittade inte {spriteName} inuti sloppet: {spriteDirectory}. medans jag sloppade din morsa😅😅");
+    }
+
     Dictionary<string, Sprite> sprites = new(StringComparer.OrdinalIgnoreCase);
 
     public Sprite GetSprite(string spriteName)
