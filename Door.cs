@@ -17,7 +17,7 @@ public class Door : RoomObject
     {
         collisionBox.position = position;
         collisionBox.size = size;
-		System.Console.WriteLine(isUnlocked);
+		//System.Console.WriteLine(isUnlocked);
     }
 
     public override void Draw(RenderWindow window)

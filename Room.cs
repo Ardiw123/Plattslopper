@@ -8,7 +8,7 @@ public class Room
 {
     public static Room MakeRoomFromRoomData(RoomData roomData)
     {
-        roomData.print();
+        roomData.Print();
         Room newRoom = new()
         {
             RoomObjects = roomData.roomObjects,

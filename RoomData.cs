@@ -24,7 +24,7 @@ public struct RoomData
     }
 
 
-    public void print()
+    public void Print()
     {
         System.Console.WriteLine(backgroundName);
         System.Console.WriteLine(roomObjects.Count);
