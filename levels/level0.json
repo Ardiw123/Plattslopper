@@ -8,75 +8,1029 @@
       "doorId": "levelkey1",
       "nextRoomName": "level1.json",
       "position": {
-        "X": 1520,
-        "Y": 780
+        "X": 950,
+        "Y": 750
       },
       "size": {
-        "X": 100,
-        "Y": 200
+        "X": 50,
+        "Y": 50
       }
     },
-
     {
       "$type": "key",
       "spriteName": "red",
       "keyId": "levelkey1",
       "position": {
-        "X": 900,
-        "Y": 700
-      },
-      "size": {
-        "X": 80,
-        "Y": 80
-      }
-    },
-    {
-      "$type": "block",
-      "spriteName": "mcnutt",
-      "position": {
-        "X": 0,
-        "Y": 1000
-      },
-      "size": {
-        "X": 1920,
+        "X": 600,
         "Y": 200
-      }
-    },
-    {
-      "$type": "block",
-      "spriteName": "båt",
-      "position": {
-        "X": 1720,
-        "Y": 0
       },
       "size": {
-        "X": 200,
-        "Y": 1080
-      }
-    },
-    {
-      "$type": "block",
-      "spriteName": "commanderniall",
-      "position": {
-        "X": 0,
-        "Y": 0
-      },
-      "size": {
-        "X": 200,
-        "Y": 1080
+        "X": 50,
+        "Y": 50
       }
     },
     {
       "$type": "player",
       "spriteName": "adolf",
       "position": {
-        "X": 700,
+        "X": 150,
+        "Y": 700
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 50,
+        "Y": 50
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 50,
+        "Y": 100
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 50,
+        "Y": 150
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 50,
+        "Y": 200
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 50,
+        "Y": 250
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 50,
+        "Y": 350
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 50,
+        "Y": 300
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 50,
         "Y": 400
       },
       "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 50,
+        "Y": 450
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 50,
+        "Y": 500
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 50,
+        "Y": 550
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 50,
+        "Y": 600
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 50,
+        "Y": 650
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 50,
+        "Y": 700
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 50,
+        "Y": 750
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 50,
+        "Y": 800
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
         "X": 100,
+        "Y": 800
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 150,
+        "Y": 800
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 200,
+        "Y": 800
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 250,
+        "Y": 800
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 300,
+        "Y": 800
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 350,
+        "Y": 800
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 400,
+        "Y": 800
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 450,
+        "Y": 800
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 500,
+        "Y": 800
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 550,
+        "Y": 800
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 600,
+        "Y": 800
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 650,
+        "Y": 800
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 700,
+        "Y": 800
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 750,
+        "Y": 800
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 800,
+        "Y": 800
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 850,
+        "Y": 800
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 900,
+        "Y": 800
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 1050,
+        "Y": 750
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 1050,
+        "Y": 650
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 1050,
+        "Y": 600
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 1050,
+        "Y": 700
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 1050,
+        "Y": 750
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 1050,
+        "Y": 800
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 1000,
+        "Y": 800
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 950,
+        "Y": 800
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 1050,
+        "Y": 550
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 1050,
+        "Y": 500
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 1050,
+        "Y": 450
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 1050,
+        "Y": 400
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 1050,
+        "Y": 350
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 1050,
+        "Y": 300
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 1050,
+        "Y": 250
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 1050,
+        "Y": 200
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 1050,
+        "Y": 150
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 1050,
         "Y": 100
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 1050,
+        "Y": 50
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 1000,
+        "Y": 50
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 900,
+        "Y": 50
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 950,
+        "Y": 50
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 850,
+        "Y": 50
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 800,
+        "Y": 50
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 750,
+        "Y": 50
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 700,
+        "Y": 50
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 650,
+        "Y": 50
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 600,
+        "Y": 50
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 550,
+        "Y": 50
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 500,
+        "Y": 50
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 450,
+        "Y": 50
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 400,
+        "Y": 50
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 200,
+        "Y": 50
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 250,
+        "Y": 50
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 300,
+        "Y": 50
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 350,
+        "Y": 50
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 150,
+        "Y": 50
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 100,
+        "Y": 50
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 550,
+        "Y": 300
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 600,
+        "Y": 300
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 650,
+        "Y": 300
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 850,
+        "Y": 350
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 900,
+        "Y": 350
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 700,
+        "Y": 450
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 650,
+        "Y": 450
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 500,
+        "Y": 550
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 450,
+        "Y": 550
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 300,
+        "Y": 650
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
+      }
+    },
+    {
+      "$type": "block",
+      "spriteName": "mcnutt",
+      "position": {
+        "X": 250,
+        "Y": 650
+      },
+      "size": {
+        "X": 50,
+        "Y": 50
       }
     }
+
+
+
   ]
 }
