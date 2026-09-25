@@ -24,7 +24,7 @@ public static class Game
     {
         using (var window = new RenderWindow(new VideoMode(WindowSize.X, WindowSize.Y), "Plattslopper"))
         {
-            window.SetFramerateLimit(600);
+            window.SetFramerateLimit(60);
             window.Closed += (o, e) => window.Close();
 
             SpriteDrawer.InitilizeAllSprites();

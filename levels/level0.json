@@ -30,23 +30,6 @@
       }
     },
     {
-      "$type": "player",
-      "spriteName": "adolf",
-      "position": {
-        "X": 420,
-        "Y": 877.5
-      },
-      "size": {
-        "X": 67.5,
-        "Y": 67.5
-      },
-      "startPosition": {
-        "X": 420,
-        "Y": 877.5
-      }
-    },
-
-    {
       "$type": "block",
       "spriteName": "mcnutt",
       "position": {
@@ -94,8 +77,6 @@
         "Y": 1080
       }
     },
-
-
     {
       "$type": "block",
       "spriteName": "mcnutt",
@@ -156,8 +137,6 @@
         "Y": 67.5
       }
     },
-
-
     {
       "$type": "coin",
       "spriteName": "commanderniall",
@@ -168,6 +147,22 @@
       "size": {
         "X": 67.5,
         "Y": 67.5
+      }
+    },
+    {
+      "$type": "player",
+      "spriteName": "adolf",
+      "position": {
+        "X": 420,
+        "Y": 877.5
+      },
+      "size": {
+        "X": 67.5,
+        "Y": 67.5
+      },
+      "startPosition": {
+        "X": 420,
+        "Y": 877.5
       }
     }
   ]
