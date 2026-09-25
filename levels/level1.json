@@ -16,7 +16,20 @@
         "Y": 200
       }
     },
-
+    {
+      "$type": "door",
+      "spriteName": "gobba",
+      "doorId": "levelkey2",
+      "nextRoomName": "level1.json",
+      "position": {
+        "X": 300,
+        "Y": 800
+      },
+      "size": {
+        "X": 100,
+        "Y": 200
+      }
+    },
     {
       "$type": "key",
       "spriteName": "red",
@@ -28,6 +41,19 @@
       "size": {
         "X": 70,
         "Y": 70
+      }
+    },
+    {
+      "$type": "key",
+      "spriteName": "red",
+      "keyId": "levelkey2",
+      "position": {
+        "X": 900,
+        "Y": 600
+      },
+      "size": {
+        "X": 170,
+        "Y": 170
       }
     },
     {
