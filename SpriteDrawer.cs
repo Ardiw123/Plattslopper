@@ -72,7 +72,7 @@ public class SpriteDrawer
 
         sprite.Scale = scale;
 
-        sprite.Position = position + new Vector2f(34, 35);
+        sprite.Position = position + new Vector2f(size.X / 2, size.Y / 2);
 
         window.Draw(sprite);
     }
