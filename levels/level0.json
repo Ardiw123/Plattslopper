@@ -4,7 +4,7 @@
   "roomObjects": [
     {
       "$type": "door",
-      "spriteName": "gobba",
+      "spriteName": "tileset",
       "doorId": "levelkey1",
       "nextRoomName": "level1.json",
       "position": {
