@@ -29,7 +29,6 @@ public class Room
     Room()
     {
         backGroundDrawer = new();
-        InitilizeEpicSongs();
     }
 
     public void StartRoom()
@@ -65,9 +64,9 @@ public class Room
         }
     }
 
-    Dictionary<string, Sound> songs = new(StringComparer.OrdinalIgnoreCase);
+    static Dictionary<string, Sound> songs = new(StringComparer.OrdinalIgnoreCase);
 
-    void InitilizeEpicSongs()
+    public static void InitilizeEpicSongs()
     {
         //får alla wav filer i assets och sparar de i en dictionary
         foreach (string filePath in Directory.EnumerateFiles("musik", "*.wav"))

@@ -30,6 +30,7 @@ public static class Game
             window.Closed += (o, e) => window.Close();
 
             SpriteDrawer.InitilizeAllSprites();
+            Room.InitilizeEpicSongs();
 
             LoadRoom();
 
