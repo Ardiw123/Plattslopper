@@ -1,6 +1,6 @@
 {
   "backgroundName": "flower",
-  "songName": "litefinpianomusik",
+  "songName": "song",
   "roomObjects": [
     {
       "$type": "door",
@@ -18,7 +18,7 @@
     },
     {
       "$type": "key",
-      "spriteName": "red",
+      "spriteName": "båt",
       "keyId": "levelkey1",
       "position": {
         "X": 1027.5,
@@ -56,7 +56,7 @@
     },
     {
       "$type": "block",
-      "spriteName": "mcnutt",
+      "spriteName": "båt",
       "position": {
         "X": 352.5,
         "Y": 0
@@ -75,19 +75,19 @@
       },
       "size": {
         "X": 1282.5,
-        "Y": 1000
+        "Y": 67.5
       }
     },
     {
       "$type": "block",
-      "spriteName": "mcnutt",
+      "spriteName": "characters",
       "position": {
-        "X": 352.5,
-        "Y": 1012.5
+        "X": 1635,
+        "Y": 0
       },
       "size": {
-        "X": 40,
-        "Y": 67.5
+        "X": 352.5,
+        "Y": 1080
       }
     },
 
@@ -130,7 +130,7 @@
     },
     {
       "$type": "block",
-      "spriteName": "mcnutt",
+      "spriteName": "båt",
       "position": {
         "X": 1365,
         "Y": 405
@@ -149,6 +149,20 @@
       },
       "size": {
         "X": 202.5,
+        "Y": 67.5
+      }
+    },
+
+
+    {
+      "$type": "coin",
+      "spriteName": "commanderniall",
+      "position": {
+        "X": 675,
+        "Y": 337.5
+      },
+      "size": {
+        "X": 67.5,
         "Y": 67.5
       }
     }

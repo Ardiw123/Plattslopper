@@ -10,6 +10,7 @@ namespace Plattslopper;
 [JsonDerivedType(typeof(Block), typeDiscriminator: "block")]
 [JsonDerivedType(typeof(Player), typeDiscriminator: "player")]
 [JsonDerivedType(typeof(Key), typeDiscriminator: "key")] 
+[JsonDerivedType(typeof(Coin), typeDiscriminator: "coin")] 
 public abstract class RoomObject
 {
 
