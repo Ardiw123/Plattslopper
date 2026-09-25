@@ -21,6 +21,14 @@
 		</EmbeddedResource>
 	</ItemGroup>
 
+		<ItemGroup>
+<None Remove="fonts/*.ttf" />
+<EmbeddedResource Include="fonts/*.ttf">
+<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+</EmbeddedResource>
+</ItemGroup>
+
+
      <ItemGroup>
 		<None Remove="musik/*.wav" />
 		<EmbeddedResource Include="musik/*.wav">

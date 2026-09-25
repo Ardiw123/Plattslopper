@@ -19,7 +19,7 @@ public class Key : RoomObject
 
     public override void Draw(RenderWindow window)
     {
-        spriteDrawer.DrawSprite(position, size, spriteDrawer.GetSprite(spriteName), window);
+        spriteDrawer.DrawSprite(position, size, spriteDrawer.GetSprite(spriteName), window, new IntRect(127, 18, 17, 18));
 
         collisionBox.DrawHitbox(window);
     }

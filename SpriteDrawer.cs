@@ -28,16 +28,6 @@ public class SpriteDrawer
         throw new KeyNotFoundException($"Hittade inte {spriteName} inuti sloppet: {spriteDirectory}.");
     }
 
-    static Sprite GetStatic(string spriteName, IntRect region)
-    {
-        if (AllSprites.TryGetValue(spriteName, out Sprite NiklasAdolfus))
-        {
-            NiklasAdolfus.TextureRect = new IntRect(0, 0, 18, 18);
-            return NiklasAdolfus;
-        }
-        throw new KeyNotFoundException($"Hittade inte {spriteName} inuti sloppet: {spriteDirectory}. medans jag sloppade din morsa😅😅");
-    }
-
     Dictionary<string, Sprite> sprites = new(StringComparer.OrdinalIgnoreCase);
 
     public Sprite GetSprite(string spriteName)
@@ -68,6 +58,17 @@ public class SpriteDrawer
     {
         sprite.Position = position;
         sprite.Scale = new Vector2f(size.X / sprite.Texture.Size.X, size.Y / sprite.Texture.Size.Y);
+        window.Draw(sprite);
+    }
+
+    public void DrawSprite(Vector2f position, Vector2f size, Sprite sprite, RenderWindow window, IntRect region)
+    {
+        Sprite niklasAdolfus = sprite;
+        niklasAdolfus.TextureRect = region;
+
+        niklasAdolfus.Position = position;
+        //niklasAdolfus.Scale = new Vector2f(size.X / niklasAdolfus.Texture.Size.X, size.Y / niklasAdolfus.Texture.Size.Y);
+        niklasAdolfus.Scale = new Vector2f(size.X / region.Width, size.Y / region.Height);
         window.Draw(sprite);
     }
 }

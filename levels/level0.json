@@ -18,7 +18,7 @@
     },
     {
       "$type": "key",
-      "spriteName": "båt",
+      "spriteName": "tileset",
       "keyId": "levelkey1",
       "position": {
         "X": 1027.5,

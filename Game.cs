@@ -14,10 +14,8 @@ public static class Game
 
     static void LoadRoom()
     {
-        currentRoom = Room.MakeRoomFromRoomData(RoomData.LoadFromFile("levels/level1.json"));
+        currentRoom = Room.MakeRoomFromRoomData(RoomData.LoadFromFile("levels/level0.json"));
         currentRoom.roomData.Print();
-        //currentRoom.RoomObjects.AddRange(currentRoom.roomData.roomObjects);
-
         currentRoom.StartRoom();
     }
 
@@ -26,7 +24,7 @@ public static class Game
     {
         using (var window = new RenderWindow(new VideoMode(WindowSize.X, WindowSize.Y), "Plattslopper"))
         {
-            window.SetFramerateLimit(60);
+            window.SetFramerateLimit(600);
             window.Closed += (o, e) => window.Close();
 
             SpriteDrawer.InitilizeAllSprites();

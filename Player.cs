@@ -11,6 +11,7 @@ public class Player : RoomObject
     public Vector2f direction = new(0, 0);
     public Vector2f velocity = new(0, 0);
     public Vector2f startPosition;
+    Text gui;
     bool isGrounded = false;
     bool isJumping = false;
     const int MAXJUMPSTEPS = 7;
@@ -25,6 +26,11 @@ public class Player : RoomObject
     {
         size = new Vector2f(100, 100);
         collisionBox = new(new(100, 100), size);
+        gui = new()
+        {
+            CharacterSize = 67,
+            Font = new Font("fonts/saturno.ttf")
+        };
     }
 
     public override void RoomStart()
@@ -82,7 +88,8 @@ public class Player : RoomObject
                 Coin coin = (Coin)roomObject;
                 if (Collision.RectangleRectangle(coin.collisionBox.collisionBoxRect, this.collisionBox.collisionBoxRect, out Collision.Hit doorHit))
                 {
-
+                    coins++;
+                    coin.remove = true;
                 }
 
             }
@@ -117,6 +124,9 @@ public class Player : RoomObject
     public override void Draw(RenderWindow window)
     {
         spriteDrawer.DrawSprite(position, size, spriteDrawer.GetSprite(spriteName), window);
+        gui.DisplayedString = $"coins: {coins}";
+        gui.Position = new Vector2f(50, 50);
+        window.Draw(gui);
 
         collisionBox.DrawHitbox(window);
     }
