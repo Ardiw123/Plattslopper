@@ -30,6 +30,7 @@ public class Player : RoomObject
         {
             CharacterSize = 67,
             Font = new Font("fonts/saturno.ttf")
+
         };
     }
 
@@ -125,7 +126,11 @@ public class Player : RoomObject
     {
         spriteDrawer.DrawSprite(position, size, spriteDrawer.GetSprite(spriteName), window);
         gui.DisplayedString = $"coins: {coins}";
-        gui.Position = new Vector2f(50, 50);
+        gui.Position = new Vector2f(400, 400);
+        gui.FillColor = Color.Red;
+        gui.OutlineThickness = 10;
+        gui.OutlineColor = Color.Black;
+
         window.Draw(gui);
 
         collisionBox.DrawHitbox(window);
