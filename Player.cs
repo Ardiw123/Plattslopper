@@ -7,7 +7,7 @@ namespace Plattslopper;
 public class Player : RoomObject
 {
     public Stack<Key> keys = new();
-    public int coins = 0;
+    public static int coins = 0;
     public Vector2f direction = new(0, 0);
     public Vector2f velocity = new(0, 0);
     public Vector2f startPosition;
@@ -148,16 +148,16 @@ public class Player : RoomObject
     public void Animate(RenderWindow window)
     {
         slop++;
-        if (slop < 30)
+        if (slop < 17)
         {
             spriteDrawer.DrawSprite(position, size, spriteDrawer.GetSprite(spriteName), window, isLeft, new IntRect(0, 0, 24, 24));
         }
-        else if (slop > 30)
+        else if (slop > 17)
         {
             spriteDrawer.DrawSprite(position, size, spriteDrawer.GetSprite(spriteName), window, isLeft, new IntRect(24, 0, 24, 24));
         }
 
-        if (slop > 60)
+        if (slop > 34)
         {
             slop = 0;
         }
